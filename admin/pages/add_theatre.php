@@ -65,7 +65,7 @@ include('header.php');
                   goto start;
                 }
               ?>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="control-label">Username</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username ?>">
                 <?php $frm->validate("username",array("required","label"=>"Username")); // Validating form using form builder written in form.php ?>
@@ -74,9 +74,9 @@ include('header.php');
                 <label class="control-label">Password</label>
                 <input type="text" name="password" class="form-control" value="<?php echo "PWD".rand(123456,999999);?>">
                 <?php $frm->validate("password",array("required","label"=>"Password")); // Validating form using form builder written in form.php ?>
-              </div>
+              </div> -->
               <div class="form-group">
-                <button class="btn btn-success">Add Theatre</button>
+                <button class="btn btn-success" style="background-color: blue">Thêm phim</button>
               </div>
               <input type="hidden" name="country" class="form-control" id="country">
               <input type="hidden" class="field" id="route" disabled="true">
