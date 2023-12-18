@@ -114,7 +114,7 @@ include('../../config.php');
       <ul class="sidebar-menu">
         <li class="treeview">
           <a href="index.php">
-            <i class="fa fa-home"></i> <span>Home</span>
+            <i class="fa fa-home"></i> <span>Trang chủ</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -123,7 +123,7 @@ include('../../config.php');
         
           <li class="treeview">
           <a href="add_theatre.php">
-            <i class="fa fa-film"></i> <span>Add Theatre</span>
+            <i class="fa fa-film"></i> <span>Thêm phim</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -131,7 +131,7 @@ include('../../config.php');
         </li>
         <li class="treeview">
           <a href="add_movie_news.php">
-            <i class="fa fa-plus"></i> <span>Upcoming Movie News</span>
+            <i class="fa fa-plus"></i> <span>Phim sắp ra mắt</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
