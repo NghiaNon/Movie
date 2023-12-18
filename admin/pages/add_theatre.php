@@ -15,7 +15,7 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Theatre
+        Thêm phim mới
       </h1>
       <ol class="breadcrumb">
         <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
@@ -31,29 +31,29 @@ include('header.php');
         <div class="box-body">
             <form action="process_add_theater.php" method="post" id="form1">
               <div class="form-group">
-                <label class="control-label">Theatre Name</label>
+                <label class="control-label">Tên phim</label>
                 <input type="text" name="name" class="form-control"/>
                 <?php $frm->validate("name",array("required","label"=>"Theatre Name")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <label class="control-label">Theatre Address</label>
+                <label class="control-label">Địa chỉ rạp phim</label>
                 <input type="text" name="address" class="form-control"/>
                 <?php $frm->validate("address",array("required","label"=>"Theatre Address")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <label class="control-label">Place</label>
+                <label class="control-label">Vị trí</label>
                 <!-- <input type="text" name="place" id="autocomplete" class="form-control"> -->
                 <input type="text" name="place" class="form-control">
                 <?php $frm->validate("place",array("required","label"=>"Place")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                 <label class="control-label">State</label>
-                <input type="text" name="state" id="administrative_area_level_1" s placeholder="State" class="form-control">
+                 <label class="control-label">Trạng thái</label>
+                <input type="text" name="state" id="administrative_area_level_1" s placeholder="2D/3D/4D" class="form-control">
                 <?php $frm->validate("state",array("required","label"=>"State")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <label class="control-label">Pin Code</label>
-                 <input type="text" name="pin" id="postal_code"s placeholder="Zip code" class="form-control">
+                <label class="control-label">Mã Pin</label>
+                 <input type="text" name="pin" id="postal_code"s placeholder="6 số" class="form-control">
                  <?php $frm->validate("pin",array("required","label"=>"Pin Code","regexp"=>"pin")); // Validating form using form builder written in form.php ?>
               </div>
               <?php
