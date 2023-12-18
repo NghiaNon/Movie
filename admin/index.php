@@ -49,7 +49,7 @@
         </div>
       </form>
 
-      <a href="../theatre/index.php">Go To Theatre Panel</a>
+      <a href="../theatre/index.php">Đi tới Theatre Panel</a>
 
     </div>
     <!-- /.login-box-body -->
