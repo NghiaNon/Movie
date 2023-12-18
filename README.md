@@ -1,4 +1,4 @@
-# Hệ thống đặt vé xem phim bằng PHP với mã nguồn
+# Hệ thống đặt vé xem phim
 
 Một dự án nâng cao dựa trên Hệ thống đặt vé xem phim trực tuyến sử dụng Ngôn ngữ PHP. Dự án PHP sau chứa tất cả các tính năng quan trọng có thể được sử dụng cho sinh viên CNTT năm thứ nhất, năm thứ hai cũng như năm cuối cho các dự án đại học của họ. Nó có các tính năng quan trọng cho phép tất cả người dùng tương tác theo cách mà hệ thống bán vé trực tuyến tương tác với khách hàng của họ về cách xử lý các khoản thanh toán, đặt chỗ và những nội dung khác của họ. Hệ thống này cũng như khái niệm của ứng dụng web đều rõ ràng, nó giống với các tình huống thực tế và được triển khai tốt trên đó. Để tải xuống dự án hệ thống đặt vé xem phim trực tuyến miễn phí bằng PHP với các tệp mã nguồn, vui lòng cuộn xuống cuối bài đăng này để tìm nút Tải xuống.
 
