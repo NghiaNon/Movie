@@ -7,11 +7,11 @@ Một dự án nâng cao dựa trên Hệ thống đặt vé xem phim trực tuy
 Tiếp tục, dự án hệ thống đặt vé xem phim bằng PHP này tập trung chủ yếu vào việc giao dịch với khách hàng, quản lý rạp liên quan đến việc đặt vé của họ và các bộ phận khác của phía quản lý. Ngoài ra, hệ thống cho phép khách hàng đăng nhập hoặc đăng ký nếu chưa có tài khoản để đặt đồ. Dự án được chia thành ba loại: Phía khách hàng, Bảng quản trị và Bảng điều khiển rạp hát. Trong phần tổng quan của trang web này (tham khảo phía khách hàng), khách hàng có thể xem số lượng phim hiện có, phim sắp ra mắt và đoạn giới thiệu phim hay nhất của mỗi trang. Nói thêm về dự án, hệ thống hiển thị chi tiết từng dự án nếu có, sau đó khách hàng chỉ cần chọn thời gian chiếu và số lượng vé để đến phần thanh toán. Sau tất cả quá trình này, khách hàng có thể xem lịch sử đặt vé của mình bằng ID đặt chỗ, tên phim, số lượng vé và tổng số tiền vé.
 
 
-# bảng quản trị
+# Quản trị viên
 Nói về bảng quản trị, quản trị viên có thể xem tất cả các phim có sẵn tại rạp và xóa nó. Anh ấy/cô ấy có thể đăng thông tin chi tiết về việc phát hành phim bằng cách điền các thông tin chi tiết như tên phim, dàn diễn viên, ngày phát hành, mô tả phim (tóm tắt cốt truyện), đoạn giới thiệu cụ thể và áp phích phim. Ngoài ra, quản trị viên có quyền truy cập để duy trì danh sách phát hành phim sắp tới. Để làm điều này, anh ấy/cô ấy phải điền tên bộ phim sắp ra mắt, ngày phát hành, mô tả, thông tin diễn viên và hình ảnh áp phích (nếu có). Đối với hệ thống đặt vé xem phim trực tuyến này, bảng quản trị có các tính năng hạn chế trong khi vai trò chính thuộc về phía quản lý rạp chiếu được trình bày ngắn gọn dưới đây.
 
 
-# Hệ thống quản lý rạp hát
+# Hệ thống quản lý 
 Mặt khác, hệ thống này không chỉ có chức năng đặt phim và thanh toán. Nó cũng chứa phần quản lý rạp hát để quản lý tất cả các chi tiết bên trong trang web. Sau khi đăng nhập vào bảng điều khiển rạp hát, người dùng có một số lượng lớn các tính năng để vận hành trong hệ thống. Tại đây, người dùng có thể quản lý chi tiết phim, chương trình, danh sách đặt chỗ, màn hình, thời gian và chi tiết rạp chiếu phim. Để quản lý các chương trình, người dùng phải chọn phim, màn hình, lịch chiếu và ngày bắt đầu. Sau đó, người dùng có thể chỉ cần thay đổi trạng thái chiếu phim thành đang chạy và có thể dừng chiếu nếu muốn. Trang bảng điều khiển chính cũng hiển thị số lượng phim đang chiếu dưới dạng bảng kèm theo thời gian chiếu, tiêu đề và màn hình của từng phim. Trong phần đặt chỗ, anh ấy/cô ấy có thể liệt kê tất cả các lượt đặt chỗ của một chương trình và màn hình cụ thể.
 
 
@@ -39,8 +39,10 @@ Cuối cùng nhưng không kém phần quan trọng, một bảng điều khiể
 - Hiển thị quản lý
 - Sắp xếp màn hình phim và thời gian chiếu
 - Bắt đầu và dừng chương trình đang chạy
+
+
 # Cách chạy chương trình
-- Cài đặt máy chủ Apache. (Tôi khuyên dùng XAMPP)
+- Cài đặt máy chủ Apache. (khuyên dùng XAMPP)
 - Cài đặt máy chủ MySQL.
 - Nhập cơ sở dữ liệu vào thư mục htdocs của máy chủ Apache.
 - Chạy máy chủ Apache và MySQL.
