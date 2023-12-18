@@ -8,7 +8,7 @@ include('header.php');
 	<div class="wrap">
 		<div class="content-top">
 				<div class="listview_1_of_3 images_1_of_3">
-					<h2 style="color:#555;">Upcoming Movies</h2>
+					<h2 style="color:#555;">Sắp ra mắt</h2>
 					<?php 
 					$qry3=mysqli_query($con,"SELECT * FROM tbl_news LIMIT 5");
 					
@@ -23,7 +23,7 @@ include('header.php');
 						  <div class="extra-wrap">
 						  	<span style="text-color:#000" class="data"><strong><?php echo $n['name'];?></strong><br>
 						  	<span style="text-color:#000" class="data"><strong>Cast :<?php echo $n['cast'];?></strong><br>
-                                <div class="data">Release Date :<?php echo $n['news_date'];?></div>
+                                <div class="data">Ngày ra mắt :<?php echo $n['news_date'];?></div>
                                 
                                 
                                 
@@ -39,7 +39,7 @@ include('header.php');
 			
 		</div>				
 		<div class="listview_1_of_3 images_1_of_3">
-					<h2 style="color:#555;">Movie Trailers</h2>
+					<h2 style="color:#555;">Trailers Phim</h2>
 						<div class="middle-list">
 					<?php 
 					$qry4=mysqli_query($con,"SELECT * FROM tbl_movie ORDER BY rand() LIMIT 6");
