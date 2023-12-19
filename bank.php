@@ -34,16 +34,16 @@ extract($_POST);
   <div id="mainContainer" class="row large-centered">
 
     <div class="text-center">
-      <h2>BANK</h2>
+      <h2>THANH TOÁN</h2>
     </div>
 
     <hr class="divider">
     <dl class="mercDetails">
-      <dt>Merchant</dt>
-      <dd>Shop Street</dd>
-      <dt>Transaction Amount</dt>
+      <dt>Phương Thức Thanh Toán</dt>
+      <dd>BIDV</dd>
+      <dt>Đơn Giá</dt>
       <dd>INR <?php echo  $_SESSION['amount']; ?></dd>
-      <dt>Debit Card</dt>
+      <dt>Thẻ ghi nợ</dt>
       <dd><?php echo  $number; ?></%>
       </dd>
     </dl>
@@ -53,8 +53,8 @@ extract($_POST);
     <form name="form1" id="form1" method="post" action="complete_payment.php">
       <fieldset class="page2">
         <div class="page-heading">
-          <h6 class="form-heading">Authenticate Payment</h6>
-          <p class="form-subheading">OTP sent to your mobile number ending with <strong>1343</strong></p>
+          <h6 class="form-heading">Xác Thực Thanh Toán</h6>
+          <p class="form-subheading">Tin nhắn OTP đã được gửi đến số điện thoại di động kết thúc sau:<strong>1343</strong></p>
 
 
         </div>
@@ -62,19 +62,19 @@ extract($_POST);
         <div class="row formInputSection">
           <div class="large-7 columns">
             <label>
-              Enter One Time Password (OTP)
+            Mã Xác thực(OTP)
               <input type="tel" name="otp" class="form-control optPass" value="" maxlength="6" autocomplete="off" />
             </label>
           </div>
           <div class="large-5 columns">
-            <label>&nbsp;</label><button class="expanded button next" onClick="ValidateForm()">Make Payment</button>
+            <label>&nbsp;</label><button class="expanded button next" onClick="ValidateForm()" style="background-color:green;">Thanh Toán</button>
           </div>
         </div>
-        <div class="text-right resendBtn requestOTP"><a class="request-link" href="javascript:void(0)">Resend OTP</a></div>
+        <div class="text-right resendBtn requestOTP"><a class="request-link" href="javascript:void(0)">Gửi lại mã OTP</a></div>
         <p>
 
 
-          <a class="tryAgain" href="complete_order.jsp">Go back</a> to merchant
+          <a class="tryAgain" href="complete_order.jsp">Quay lại</a> để chọn phim
         </p>
       </fieldset>
 
