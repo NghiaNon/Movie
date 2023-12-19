@@ -20,7 +20,7 @@
 			</div>
 			<div class="col_1_of_4 span_1_of_4">
 				<div class="call_info">
-					<p class="txt_3">Gọi cho tổng đài</p>
+					<p class="txt_3">Tư vấn miễn phí</p>
 					<p class="txt_4">1900000</p>
 				</div>
 			</div>
