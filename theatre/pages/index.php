@@ -8,11 +8,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Theatre Assistance
+        Quản lý rạp chiếu phim
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Home</li>
+        <li><a href="index"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li class="active">Trang chủ</li>
       </ol>
     </section>
 
@@ -25,16 +25,16 @@ include('header.php');
             
             <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Running Movies</h3>
+              <h3 class="box-title">Phim đang chiếu</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body no-padding">
               <table class="table table-condensed">
                 <tr>
-                  <th class="col-md-1">No</th>
-                  <th class="col-md-3">Show Time</th>
-                  <th class="col-md-4">Screen</th>
-                  <th class="col-md-4">Movie</th>
+                  <th class="col-md-1">Số thứ tự</th>
+                  <th class="col-md-3">Thời gian</th>
+                  <th class="col-md-4">Rạp</th>
+                  <th class="col-md-4">Phim</th>
                 </tr>
                 <?php 
 					$qry8=mysqli_query($con,"select * from tbl_shows where r_status=1 and theatre_id='".$_SESSION['theatre']."'");

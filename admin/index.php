@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Theatre Assistant| Admin</title>
+    <title>Admin 1| Đăng nhập</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -27,14 +27,14 @@
   <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a>Theatre Assistant</a> 
+      <a>ADMIN 1</a> 
       <br>
-      <b>Quản trị viên</b>
+      <b>QUẢN TRỊ VIÊN 1</b>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
       <?php session_start(); include('../msgbox.php');?>
-      <p class="login-box-msg">Please login to start your session</p>
+      <p class="login-box-msg">Vui lòng đăng nhập tài khoản admin 1</p>
   <form action="pages/process_login.php" method="post">
         <div class="form-group has-feedback">
           <input name="Email" type="text" size="25" placeholder="Username" class="form-control"/>
@@ -45,11 +45,11 @@
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-danger">Login</button>
+            <button type="submit" class="btn btn-danger">Đăng nhập</button>
         </div>
       </form>
 
-      <a href="../theatre/index.php">Đi tới Theatre Panel</a>
+      <a href="../theatre/index.php">Đi tới Admin 2</a>
 
     </div>
     <!-- /.login-box-body -->

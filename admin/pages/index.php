@@ -11,8 +11,8 @@ include('header.php');
         Danh sách phim
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Movies List</li>
+        <li><a href="index"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li class="active">Danh sách phim</li>
       </ol>
     </section>
 
