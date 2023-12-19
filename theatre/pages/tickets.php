@@ -16,11 +16,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Todays Bookings
+        Chỗ ngồi đặt hôm nay
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Todays Bookings</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Chỗ ngồi đặt hôm nay</li>
       </ol>
     </section>
 
@@ -33,9 +33,9 @@ include('header.php');
           <div class="panel panel-default">
             <div class="panel-body">
               <div class="form-group col-md-6">
-                <label class="control-label">Select Screen</label>
+                <label class="control-label">Chọn phòng</label>
                 <select class="form-control" id="screen">
-                  <option value="0">Select Screen</option>
+                  <option value="0">Danh sách phòng</option>
                   <?php
                   $q=mysqli_query($con,"select  * from tbl_screens where t_id='".$_SESSION['theatre']."'");
                   while($th=mysqli_fetch_array($q))
@@ -48,9 +48,9 @@ include('header.php');
                 </select>
               </div>
               <div class="form-group col-md-6">
-                <label class="control-label">Select Show</label>
+                <label class="control-label">Chọn giờ chiếu</label>
                 <select class="form-control" id="show">
-                  <option value="0">Select Screen</option>
+                  <option value="0">Danh sách giờ</option>
                   
                 </select>
               </div>

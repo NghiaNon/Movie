@@ -8,11 +8,11 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Todays Shows
+        Phim chiếu hôm nay
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Todays Shows</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Phim chiếu hôm nay</li>
       </ol>
     </section>
 
@@ -22,7 +22,7 @@ include('header.php');
       <!-- Default box --> 
       <div class="box">
          <div class="box-header with-border">
-              <h3 class="box-title">Available Shows</h3>
+              <h3 class="box-title">Phim đang chiếu</h3>
             </div>
         <div class="box-body">
           <?php
@@ -78,7 +78,7 @@ include('header.php');
           else
           {
             ?>
-            <h3>No Shows Added</h3>
+            <h3>Hiện chưa có phim đang chiếu</h3>
             <?php
           }
           ?>
