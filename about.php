@@ -13,22 +13,22 @@ $movie = mysqli_fetch_array($qry2);
 							<img src="<?php echo $movie['image']; ?>" alt="" />
 						</div>
 						<div class="desc span_3_of_2">
-							<p class="p-link" style="font-size:15px"><b>Cast : </b><?php echo $movie['cast']; ?></p>
-							<p class="p-link" style="font-size:15px"><b>Release Date : </b><?php echo date('d-M-Y', strtotime($movie['release_date'])); ?></p>
+							<p class="p-link" style="font-size:15px"><b>Diễn viên : </b><?php echo $movie['cast']; ?></p>
+							<p class="p-link" style="font-size:15px"><b>Ngày ra mắt : </b><?php echo date('d-M-Y', strtotime($movie['release_date'])); ?></p>
 							<p style="font-size:15px"><?php echo $movie['desc']; ?></p>
-							<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but" style="text-decoration:none;">Watch Trailer</a>
+							<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but" style="text-decoration:none;">Xem Trailer</a>
 						</div>
 						<div class="clear"></div>
 					</div>
 					<?php $s = mysqli_query($con, "select DISTINCT theatre_id from tbl_shows where movie_id='" . $movie['movie_id'] . "'");
 					if (mysqli_num_rows($s)) { ?>
 						<table class="table table-hover table-bordered text-center">
-							<h3 style="color:#444;" class="text-center">Available Shows</h3>
+							<h3 style="color:#444;" class="text-center">Rạp đang chiếu</h3>
 
 							<thead>
 								<tr>
-									<th class="text-center" style="font-size:16px;"><b>Theatre</b></th>
-									<th class="text-center" style="font-size:16px;"><b>Show Timings</b></th>
+									<th class="text-center" style="font-size:16px;"><b>Tên rạp</b></th>
+									<th class="text-center" style="font-size:16px;"><b>Thời gian chiếu</b></th>
 								</tr>
 							</thead>
 							<?php
@@ -69,8 +69,8 @@ $movie = mysqli_fetch_array($qry2);
 					<?php
 					} else {
 					?>
-						<h3 style="color:#444; font-size:23px;" class="text-center">Currently there are no any shows available!</h3>
-						<p class="text-center">Please check back later!</p>
+						<h3 style="color:#444; font-size:23px;" class="text-center">Phim hiện chưa chiếu trên bất kì rạp nào!</h3>
+						<p class="text-center">Hãy quay lại sau. Xin cảm ơn!</p>
 					<?php
 					}
 					?>
