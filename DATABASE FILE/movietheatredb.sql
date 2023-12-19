@@ -157,7 +157,7 @@ CREATE TABLE `tbl_registration` (
   `phone` varchar(12) NOT NULL,
   `age` int(2) NOT NULL,
   `gender` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_registration`
@@ -167,6 +167,7 @@ INSERT INTO `tbl_registration` (`user_id`, `name`, `email`, `phone`, `age`, `gen
 (2, 'Harry Den', 'harryden@gmail.com', '1247778540', 22, 'gender'),
 (4, 'Bruno', 'bruno@gmail.com', '7451112450', 30, 'gender'),
 (5, 'James', 'james@gmail.com', '7124445696', 25, 'gender');
+(3, 'test', 'test@gmail.com', '0123456789', 21, 'gender');
 
 -- --------------------------------------------------------
 
