@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 15, 2021 at 08:23 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th12 19, 2023 lúc 11:26 AM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `movietheatredb`
+-- Cơ sở dữ liệu: `movietheatredb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_bookings`
+-- Cấu trúc bảng cho bảng `tbl_bookings`
 --
 
 CREATE TABLE `tbl_bookings` (
@@ -38,10 +39,10 @@ CREATE TABLE `tbl_bookings` (
   `ticket_date` date NOT NULL,
   `date` date NOT NULL,
   `status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_bookings`
+-- Đang đổ dữ liệu cho bảng `tbl_bookings`
 --
 
 INSERT INTO `tbl_bookings` (`book_id`, `ticket_id`, `t_id`, `user_id`, `show_id`, `screen_id`, `no_seats`, `amount`, `ticket_date`, `date`, `status`) VALUES
@@ -52,7 +53,7 @@ INSERT INTO `tbl_bookings` (`book_id`, `ticket_id`, `t_id`, `user_id`, `show_id`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_contact`
+-- Cấu trúc bảng cho bảng `tbl_contact`
 --
 
 CREATE TABLE `tbl_contact` (
@@ -61,24 +62,24 @@ CREATE TABLE `tbl_contact` (
   `email` varchar(100) NOT NULL,
   `mobile` int(11) NOT NULL,
   `subject` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_login`
+-- Cấu trúc bảng cho bảng `tbl_login`
 --
 
 CREATE TABLE `tbl_login` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL COMMENT 'email',
+  `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL COMMENT 'email',
   `password` varchar(50) NOT NULL,
   `user_type` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_login`
+-- Đang đổ dữ liệu cho bảng `tbl_login`
 --
 
 INSERT INTO `tbl_login` (`id`, `user_id`, `username`, `password`, `user_type`) VALUES
@@ -88,91 +89,92 @@ INSERT INTO `tbl_login` (`id`, `user_id`, `username`, `password`, `user_type`) V
 (12, 2, 'harryden@gmail.com', 'password', 2),
 (15, 14, 'USR295127', 'PWD195747', 1),
 (17, 4, 'bruno@gmail.com', 'password', 2),
-(18, 6, 'THR760801', 'PWD649976', 1),
-(19, 5, 'james@gmail.com', 'password', 2);
+(20, 7, 'THR848514', 'PWD873718', 1),
+(22, 6, 'test@gmail.com', '1234567', 2),
+(23, 9, '', '', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_movie`
+-- Cấu trúc bảng cho bảng `tbl_movie`
 --
 
 CREATE TABLE `tbl_movie` (
   `movie_id` int(11) NOT NULL,
   `t_id` int(11) NOT NULL COMMENT 'theatre id',
-  `movie_name` varchar(255) NOT NULL,
-  `cast` varchar(500) NOT NULL,
-  `desc` varchar(1000) NOT NULL,
+  `movie_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `cast` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `desc` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `release_date` date NOT NULL,
   `image` varchar(200) NOT NULL,
   `video_url` varchar(200) NOT NULL,
   `status` int(1) NOT NULL COMMENT '0 means active '
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_movie`
+-- Đang đổ dữ liệu cho bảng `tbl_movie`
 --
 
 INSERT INTO `tbl_movie` (`movie_id`, `t_id`, `movie_name`, `cast`, `desc`, `release_date`, `image`, `video_url`, `status`) VALUES
-(1, 3, 'The Invisible Man', 'Elisabeth Moss, Oliver Jackson-Cohen, Aldis Hodge, Storm Reid', 'Cecilia\'s abusive ex-boyfriend fakes his death and becomes invisible to stalk and torment her. She begins experiencing strange events and decides to hunt down the truth on her own.', '2020-03-04', 'images/tim.jpg', 'https://www.youtube.com/watch?v=WO_FJdiY9dA', 0),
-(11, 6, 'Cherry', 'Tom Holland, Ciara Bravo, Harry Holland, Kelli Berglund', 'Cherry (Tom Holland) drifts from college dropout to army medic in Iraq-anchored only by his one true love, Emily (Ciara Bravo). But after returning from the war with PTSD, his life spirals into drugs.', '2021-03-01', 'images/cherry.jpg', 'https://www.youtube.com/watch?v=H5bH6O0bErk', 0),
-(12, 6, 'Godzilla vs. Kong', 'Millie Bobby Brown, Alexander Skarsgard, Rebecca Hall', 'The initial confrontation between the two titans -- instigated by unseen forces -- is only the beginning of the mystery that lies deep within the core of the planet.', '2021-03-31', 'images/gvkpster.jpg', 'https://www.youtube.com/watch?v=odM92ap8_c0', 0),
-(13, 6, 'Outside the Wire', 'Anthony Mackie, Damson Idris, Emily Beecham', 'In the near future, a drone pilot sent into a war zone finds himself paired up with a top-secret android officer on a mission to stop a nuclear attack.', '2021-01-28', 'images/otw.jpg', 'https://www.youtube.com/watch?v=u8ZsUivELbs', 0),
-(17, 6, 'Justice League', 'Ben Affleck, Henry Cavil, Ezra Miller', 'This is a demo description for the movie ZSJL.', '2021-03-22', 'images/zsjl.jpg', 'https://www.youtube.com/watch?v=vM-Bja2Gy04', 0);
+(12, 6, 'AQUAMAN VÀ VƯƠNG QUỐC THẤT LẠC', 'Jason Momoa, Ben Affleck, Patrick Wilson...', 'Tuy thất bại trong việc đánh bại Aquaman trong lần chạm trán đầu tiên, Black Manta vẫn nung nấu ý định trả thù cho cái chết của cha mình, và hắn sẽ không dừng lại cho đến khi hạ gục được Aquaman một lần và mãi mãi.', '2023-12-22', 'images/aquaman.jpg', 'https://www.youtube.com/watch?v=OmUKJ2izSg8&t=2s', 0),
+(13, 6, 'KẺ ĂN HỒN', 'Hoàng Hà, Võ Điền Gia Huy, Huỳnh Thanh Trực, NSƯT Chiều Xuân, Nghệ sĩ Viết Liên, NSND Ngọc Thư, Nguyễn Hữu Tiến, Nguyễn Phước Lộc, Nghinh Lộc, Lý Hồng Ân, Vũ Đức Ngọc…', 'Phim về hàng loạt cái chết bí ẩn ở Làng Địa Ngục, nơi có ma thuật cổ xưa: 5 mạng đổi bình Rượu Sọ Người. Thập Nương - cô gái áo đỏ là kẻ nắm giữ bí thuật luyện nên loại rượu mạnh nhất!', '2023-12-15', 'images/keanhon.jpg', 'https://www.youtube.com/watch?v=xWh0g4rKGjI', 0),
+(17, 6, 'PHI CÔNG SIÊU ĐẲNG MAVERICK (CHIẾU LẠI)', 'Tom Cruise, Justin Marks, Peter Craig, Eric Warren Singer', 'Top Gun: Maverick tập trung gợi cho khán giả những kỷ niệm về tập phim năm 1986. Êkíp cũng đưa Maverick trở lại với chiếc F-14 Tomcat, loại máy bay tiêm kích gắn liền với anh.', '2022-05-27', 'images/topgun.jpg', 'https://www.youtube.com/watch?v=ZR99nOkEolM', 0),
+(18, 6, 'THIẾU NIÊN VÀ CHIM DIỆC', 'Santoki Soma, Suda Masaki, Shibasaki Ko, Aimyon, Kimura Yoshino, Kimura Takuya, Kobayashi Karo', 'Đến từ Studio Ghibli và đạo diễn Miyazaki Hayao, bộ phim là câu chuyện về hành trình kỳ diệu của cậu thiếu niên Mahito trong một thế giới hoàn toàn mới lạ. Trải qua nỗi đau mất mẹ cùng mối quan hệ chẳng mấy vui vẻ với gia đình cũng như bạn học, Mahito dần cô lập bản thân... cho đến khi cậu gặp một chú chim diệc biết nói kỳ lạ.', '2023-12-15', 'images/thieunienvachim.jpg', 'https://www.youtube.com/watch?v=eggzAobZzHc', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_news`
+-- Cấu trúc bảng cho bảng `tbl_news`
 --
 
 CREATE TABLE `tbl_news` (
   `news_id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `cast` varchar(100) NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `cast` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `news_date` date NOT NULL,
-  `description` varchar(1000) NOT NULL,
-  `attachment` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `description` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `attachment` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_news`
+-- Đang đổ dữ liệu cho bảng `tbl_news`
 --
 
 INSERT INTO `tbl_news` (`news_id`, `name`, `cast`, `news_date`, `description`, `attachment`) VALUES
-(3, 'Black Widow', 'Scarlett Johansson, Florence Pugh, David Harbour, Rachel Weisz', '2021-07-09', 'At birth the Black Widow (aka Natasha Romanova) is given to the KGB, which grooms her to become its ultimate operative.', 'news_images/blackwidow.jpg'),
-(9, 'Shang-Chi and the Legend of the Ten Rings', 'Simu Liu, Awkwafina, Tony Leung, Fala Chen, Micheele Yeoh', '2021-09-14', 'Shang-Chi is a master of numerous unarmed and weaponry-based wushu styles, including the use of the gun, nunchaku, and jian.', 'news_images/shangchi.jpg'),
-(10, 'The Eternals', 'Richard Madden, Salma Hayek, Angelina Jolie, Kit Harrington', '2021-11-04', 'The saga of the eternals, a race of immortal beings who lived on earth and shaped its history and civilizations.', 'news_images/eternals.jpg');
+(11, 'AQUAMAN VÀ VƯƠNG QUỐC THẤT LẠC', 'Jason Momoa, Ben Affleck, Patrick Wilson...', '2023-12-24', 'Trong lần trở lại này, Black Manta trở nên đáng gờm hơn bao giờ hết khi hắn sử dụng sức mạnh của cây đinh ba đen huyền thoại để giải phóng một thế lực hắc ám cổ xưa.', 'news_images/aquaman.jpg'),
+(12, 'NHÀ VỊT DI CƯ', 'Kumail Nanjiani, Elizabeth Banks, Caspar Jennings, Tresi Gazal, Awkwafina,...', '2023-12-29', 'Nhà Vịt Di Cư theo chân một gia đình vịt trời gồm vịt bố, vịt mẹ, cậu con trai tuổi teen Dax và vịt út Gwen, trong lần đầu tiên trải nghiệm chuyến di cư tiến về phía nam để trú đông. ', 'news_images/nhavitdicu.jpg'),
+(13, 'MÈO BÉO SIÊU QUẬY', 'Hannah Waddingham, Chris Pratt, Samuel L. Jackson', '2024-05-24', 'Mèo vàng Garfield siêu quậy quay trở lại trong bộ phim mới nhất Garfield Movie. Đón xem ngay vào dịp hè năm 2024 nhé!', 'news_images/meobeosieuquay.jpg'),
+(15, 'VẸT CÒ PHIÊU LƯU KÝ: VIÊN NGỌC BÍ ẨN', 'Jay Myers, Kyra Jackson, Simona Berman', '2023-12-22', 'Richard – chú vẹt lớn lên giữa đàn cò luôn tự tin sẽ có được vị trí dẫn đàn trở về phương Bắc.', 'news_images/vetco.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_registration`
+-- Cấu trúc bảng cho bảng `tbl_registration`
 --
 
 CREATE TABLE `tbl_registration` (
   `user_id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(12) NOT NULL,
   `age` int(2) NOT NULL,
   `gender` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_registration`
+-- Đang đổ dữ liệu cho bảng `tbl_registration`
 --
 
 INSERT INTO `tbl_registration` (`user_id`, `name`, `email`, `phone`, `age`, `gender`) VALUES
 (2, 'Harry Den', 'harryden@gmail.com', '1247778540', 22, 'gender'),
 (4, 'Bruno', 'bruno@gmail.com', '7451112450', 30, 'gender'),
-(5, 'James', 'james@gmail.com', '7124445696', 25, 'gender');
-(3, 'test', 'test@gmail.com', '0123456789', 21, 'gender');
+(5, 'James', 'james@gmail.com', '7124445696', 25, 'gender'),
+(6, 'test', 'test@gmail.com', '0323456789', 21, 'gender');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_screens`
+-- Cấu trúc bảng cho bảng `tbl_screens`
 --
 
 CREATE TABLE `tbl_screens` (
@@ -181,10 +183,10 @@ CREATE TABLE `tbl_screens` (
   `screen_name` varchar(110) NOT NULL,
   `seats` int(11) NOT NULL COMMENT 'number of seats',
   `charge` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_screens`
+-- Đang đổ dữ liệu cho bảng `tbl_screens`
 --
 
 INSERT INTO `tbl_screens` (`screen_id`, `t_id`, `screen_name`, `seats`, `charge`) VALUES
@@ -198,7 +200,7 @@ INSERT INTO `tbl_screens` (`screen_id`, `t_id`, `screen_name`, `seats`, `charge`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_shows`
+-- Cấu trúc bảng cho bảng `tbl_shows`
 --
 
 CREATE TABLE `tbl_shows` (
@@ -209,10 +211,10 @@ CREATE TABLE `tbl_shows` (
   `start_date` date NOT NULL,
   `status` int(11) NOT NULL COMMENT '1 means show available',
   `r_status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_shows`
+-- Đang đổ dữ liệu cho bảng `tbl_shows`
 --
 
 INSERT INTO `tbl_shows` (`s_id`, `st_id`, `theatre_id`, `movie_id`, `start_date`, `status`, `r_status`) VALUES
@@ -224,7 +226,7 @@ INSERT INTO `tbl_shows` (`s_id`, `st_id`, `theatre_id`, `movie_id`, `start_date`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_show_time`
+-- Cấu trúc bảng cho bảng `tbl_show_time`
 --
 
 CREATE TABLE `tbl_show_time` (
@@ -232,10 +234,10 @@ CREATE TABLE `tbl_show_time` (
   `screen_id` int(11) NOT NULL,
   `name` varchar(40) NOT NULL COMMENT 'noon,second,etc',
   `start_time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_show_time`
+-- Đang đổ dữ liệu cho bảng `tbl_show_time`
 --
 
 INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
@@ -258,12 +260,13 @@ INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
 (18, 6, 'Noon', '00:02:00'),
 (19, 6, 'First', '06:35:00'),
 (20, 6, 'Second', '09:18:00'),
-(21, 5, 'Matinee', '20:04:00');
+(21, 5, 'Matinee', '20:04:00'),
+(22, 7, 'First', '02:12:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_theatre`
+-- Cấu trúc bảng cho bảng `tbl_theatre`
 --
 
 CREATE TABLE `tbl_theatre` (
@@ -273,10 +276,10 @@ CREATE TABLE `tbl_theatre` (
   `place` varchar(100) NOT NULL,
   `state` varchar(50) NOT NULL,
   `pin` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tbl_theatre`
+-- Đang đổ dữ liệu cho bảng `tbl_theatre`
 --
 
 INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VALUES
@@ -286,123 +289,134 @@ INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VAL
 (6, 'Riverview Theater', '3800 42nd Ave S', 'Minneapolis, MN 55406', 'Minnesot', 224450);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_bookings`
+-- Chỉ mục cho bảng `tbl_bookings`
 --
 ALTER TABLE `tbl_bookings`
   ADD PRIMARY KEY (`book_id`);
 
 --
--- Indexes for table `tbl_contact`
+-- Chỉ mục cho bảng `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   ADD PRIMARY KEY (`contact_id`);
 
 --
--- Indexes for table `tbl_login`
+-- Chỉ mục cho bảng `tbl_login`
 --
 ALTER TABLE `tbl_login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_movie`
+-- Chỉ mục cho bảng `tbl_movie`
 --
 ALTER TABLE `tbl_movie`
   ADD PRIMARY KEY (`movie_id`);
 
 --
--- Indexes for table `tbl_news`
+-- Chỉ mục cho bảng `tbl_news`
 --
 ALTER TABLE `tbl_news`
   ADD PRIMARY KEY (`news_id`);
 
 --
--- Indexes for table `tbl_registration`
+-- Chỉ mục cho bảng `tbl_registration`
 --
 ALTER TABLE `tbl_registration`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexes for table `tbl_screens`
+-- Chỉ mục cho bảng `tbl_screens`
 --
 ALTER TABLE `tbl_screens`
   ADD PRIMARY KEY (`screen_id`);
 
 --
--- Indexes for table `tbl_shows`
+-- Chỉ mục cho bảng `tbl_shows`
 --
 ALTER TABLE `tbl_shows`
   ADD PRIMARY KEY (`s_id`);
 
 --
--- Indexes for table `tbl_show_time`
+-- Chỉ mục cho bảng `tbl_show_time`
 --
 ALTER TABLE `tbl_show_time`
   ADD PRIMARY KEY (`st_id`);
 
 --
--- Indexes for table `tbl_theatre`
+-- Chỉ mục cho bảng `tbl_theatre`
 --
 ALTER TABLE `tbl_theatre`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_bookings`
+-- AUTO_INCREMENT cho bảng `tbl_bookings`
 --
 ALTER TABLE `tbl_bookings`
   MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
--- AUTO_INCREMENT for table `tbl_contact`
+-- AUTO_INCREMENT cho bảng `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `tbl_login`
+-- AUTO_INCREMENT cho bảng `tbl_login`
 --
 ALTER TABLE `tbl_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
--- AUTO_INCREMENT for table `tbl_movie`
+-- AUTO_INCREMENT cho bảng `tbl_movie`
 --
 ALTER TABLE `tbl_movie`
-  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
--- AUTO_INCREMENT for table `tbl_news`
+-- AUTO_INCREMENT cho bảng `tbl_news`
 --
 ALTER TABLE `tbl_news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
--- AUTO_INCREMENT for table `tbl_registration`
+-- AUTO_INCREMENT cho bảng `tbl_registration`
 --
 ALTER TABLE `tbl_registration`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
--- AUTO_INCREMENT for table `tbl_screens`
+-- AUTO_INCREMENT cho bảng `tbl_screens`
 --
 ALTER TABLE `tbl_screens`
-  MODIFY `screen_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `screen_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT for table `tbl_shows`
+-- AUTO_INCREMENT cho bảng `tbl_shows`
 --
 ALTER TABLE `tbl_shows`
   MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
--- AUTO_INCREMENT for table `tbl_show_time`
+-- AUTO_INCREMENT cho bảng `tbl_show_time`
 --
 ALTER TABLE `tbl_show_time`
-  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
--- AUTO_INCREMENT for table `tbl_theatre`
+-- AUTO_INCREMENT cho bảng `tbl_theatre`
 --
 ALTER TABLE `tbl_theatre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
