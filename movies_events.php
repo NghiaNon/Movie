@@ -3,8 +3,7 @@
 <div class="content">
 	<div class="wrap">
 		<div class="content-top">
-			<center><h1 style="color:#555;">(NOW SHOWING)</h1></center>
-			
+			<center><h1 style="color:#555;">Phim đang chiếu</h1></center>
 			<?php
           	 $today=date("Y-m-d");
           	 $qry2=mysqli_query($con,"select * from  tbl_movie ");
