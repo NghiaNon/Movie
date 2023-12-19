@@ -131,9 +131,9 @@ CREATE TABLE `tbl_news` (
   `name` varchar(100) NOT NULL,
   `cast` varchar(100) NOT NULL,
   `news_date` date NOT NULL,
-  `description` varchar(200) NOT NULL,
+  `description` varchar(1000) NOT NULL,
   `attachment` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_news`
