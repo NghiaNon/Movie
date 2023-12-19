@@ -58,13 +58,13 @@
 		position: relative;
 		padding: 6px 15px;
 		left: -8px;
-		border: 2px solid #c7172a;
-		background-color: #c7172a;
+		border: 2px solid #db9603;
+		background-color: #db9603;
 		color: #f7f8f9;
 	}
 
 	#button111:hover {
-		background-color: #b70929;
+		background-color: #dba303;
 		color: white;
 	}
 </style>

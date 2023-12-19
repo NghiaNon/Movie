@@ -278,11 +278,12 @@ a:hover {
   display: block;
 }
 .block {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 #reservation-form {
   float: right;
-  margin-top: 6px;
+  margin-top: -5px;
+  margin-bottom:10px
 }
 #reservation-form .field {
   float: left;

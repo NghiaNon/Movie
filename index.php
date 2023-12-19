@@ -22,7 +22,7 @@
 							<div class="text list_1_of_2">
 								<div class="extra-wrap">
 									<span style="text-color:#000" class="data"><strong><?php echo $n['name']; ?></strong><br>
-										<span style="text-color:#000" class="data"><strong>Cast :<?php echo $n['cast']; ?></strong><br>
+										<span style="text-color:#000" class="data"><strong>Diễn viên :<?php echo $n['cast']; ?></strong><br>
 											<div class="data">Ngày ra mắt :<?php echo $n['news_date']; ?></div>
 
 
