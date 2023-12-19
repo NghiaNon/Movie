@@ -16,12 +16,12 @@ include('header.php');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add Upcoming Movie News
+        Thêm phim mới sắp ra mắt
       </h1>
       
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Add Movies News</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Phim sắp ra mắt</li>
       </ol>
     </section>
 
@@ -33,34 +33,34 @@ include('header.php');
         <div class="box-body">
             <form action="process_add_news.php" method="post" enctype="multipart/form-data" id="form1">
               <div class="form-group">
-                <label class="control-label">Movie name</label>
+                <label class="control-label">Tên phim</label>
                 <input type="text" name="name" class="form-control"/>
                 <?php $frm->validate("name",array("required","label"=>"Movie Name")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                 <label class="control-label">Cast</label>
+                 <label class="control-label">Các diễn viên có trong phim</label>
                 <input type="text" name="cast" class="form-control">
                 <?php $frm->validate("cast",array("required","label"=>"Cast","regexp"=>"text")); // Validating form using form builder written in form.php ?>
               </div>
               
               <div class="form-group">
-                <label class="control-label">Release Date</label>
+                <label class="control-label">Ngày ra mắt</label>
                 <input type="date" name="date" class="form-control"/>
                 <?php $frm->validate("date",array("required","label"=>"Release Date")); // Validating form using form builder written in form.php ?>
               </div>
               
               <div class="form-group">
-                <label class="control-label">Description</label>
+                <label class="control-label">Miêu tả</label>
                  <input type="text" name="description" class="form-control">
                  <?php $frm->validate("description",array("required","label"=>"Description")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                  <label class="control-label">Images</label>
+                  <label class="control-label">Hình ảnh</label>
               <input type="file"  name="attachment" class="form-control" placeholder="Images">
                <?php $frm->validate("attachment",array("required","label"=>"Image")); // Validating form using form builder written in form.php ?>
               </div>
               <div class="form-group">
-                <button class="btn btn-success">Add News</button>
+                <button class="btn btn-success">Thêm phim mới</button>
               </div>
         </form>
         </div> 

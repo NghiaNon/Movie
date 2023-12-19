@@ -49,7 +49,7 @@ include('../../config.php');
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>O</b>BS</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>OMTBS</b></span>
+      <span class="logo-lg"><b>QUẢN TRỊ VIÊN</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -75,7 +75,7 @@ include('../../config.php');
                 <img src="admin-icn.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Theatre Assistant
+                  QUẢN TRỊ VIÊN
                 </p>
               </li>
               <li class="user-footer">
@@ -105,7 +105,7 @@ include('../../config.php');
         </div>
         <div class="pull-left info">
           <p>Administrator</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Trực tuyến</a>
         </div>
       </div>
       
