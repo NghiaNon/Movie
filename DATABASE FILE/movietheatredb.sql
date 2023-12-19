@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 19, 2023 lúc 03:08 PM
+-- Thời gian đã tạo: Th12 19, 2023 lúc 05:02 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -118,7 +118,8 @@ INSERT INTO `tbl_movie` (`movie_id`, `t_id`, `movie_name`, `cast`, `desc`, `rele
 (12, 6, 'AQUAMAN VÀ VƯƠNG QUỐC THẤT LẠC', 'Jason Momoa, Ben Affleck, Patrick Wilson...', 'Tuy thất bại trong việc đánh bại Aquaman trong lần chạm trán đầu tiên, Black Manta vẫn nung nấu ý định trả thù cho cái chết của cha mình, và hắn sẽ không dừng lại cho đến khi hạ gục được Aquaman một lần và mãi mãi.', '2023-12-22', 'images/aquaman.jpg', 'https://www.youtube.com/watch?v=OmUKJ2izSg8&t=2s', 0),
 (13, 6, 'KẺ ĂN HỒN', 'Hoàng Hà, Võ Điền Gia Huy, Huỳnh Thanh Trực, NSƯT Chiều Xuân, Nghệ sĩ Viết Liên, NSND Ngọc Thư, Nguyễn Hữu Tiến, Nguyễn Phước Lộc, Nghinh Lộc, Lý Hồng Ân, Vũ Đức Ngọc…', 'Phim về hàng loạt cái chết bí ẩn ở Làng Địa Ngục, nơi có ma thuật cổ xưa: 5 mạng đổi bình Rượu Sọ Người. Thập Nương - cô gái áo đỏ là kẻ nắm giữ bí thuật luyện nên loại rượu mạnh nhất!', '2023-12-15', 'images/keanhon.jpg', 'https://www.youtube.com/watch?v=xWh0g4rKGjI', 0),
 (17, 6, 'PHI CÔNG SIÊU ĐẲNG MAVERICK (CHIẾU LẠI)', 'Tom Cruise, Justin Marks, Peter Craig, Eric Warren Singer', 'Top Gun: Maverick tập trung gợi cho khán giả những kỷ niệm về tập phim năm 1986. Êkíp cũng đưa Maverick trở lại với chiếc F-14 Tomcat, loại máy bay tiêm kích gắn liền với anh.', '2022-05-27', 'images/topgun.jpg', 'https://www.youtube.com/watch?v=ZR99nOkEolM', 0),
-(18, 6, 'THIẾU NIÊN VÀ CHIM DIỆC', 'Santoki Soma, Suda Masaki, Shibasaki Ko, Aimyon, Kimura Yoshino, Kimura Takuya, Kobayashi Karo', 'Đến từ Studio Ghibli và đạo diễn Miyazaki Hayao, bộ phim là câu chuyện về hành trình kỳ diệu của cậu thiếu niên Mahito trong một thế giới hoàn toàn mới lạ. Trải qua nỗi đau mất mẹ cùng mối quan hệ chẳng mấy vui vẻ với gia đình cũng như bạn học, Mahito dần cô lập bản thân... cho đến khi cậu gặp một chú chim diệc biết nói kỳ lạ.', '2023-12-15', 'images/thieunienvachim.jpg', 'https://www.youtube.com/watch?v=eggzAobZzHc', 0);
+(18, 6, 'THIẾU NIÊN VÀ CHIM DIỆC', 'Santoki Soma, Suda Masaki, Shibasaki Ko, Aimyon, Kimura Yoshino, Kimura Takuya, Kobayashi Karo', 'Đến từ Studio Ghibli và đạo diễn Miyazaki Hayao, bộ phim là câu chuyện về hành trình kỳ diệu của cậu thiếu niên Mahito trong một thế giới hoàn toàn mới lạ. Trải qua nỗi đau mất mẹ cùng mối quan hệ chẳng mấy vui vẻ với gia đình cũng như bạn học, Mahito dần cô lập bản thân... cho đến khi cậu gặp một chú chim diệc biết nói kỳ lạ.', '2023-12-15', 'images/thieunienvachim.jpg', 'https://www.youtube.com/watch?v=eggzAobZzHc', 0),
+(19, 6, 'XIN CHÀO JADOO', 'Yeo Min Jeong, Yang Jeong hwa, Choi Joon young, Jeong Yu mi,...', 'Bộ phim Hello Jadoo nổi bật với cốt truyện vô cùng khác biệt, đưa nhân vật Jadoo bước đến cuộc hành trình phiêu lưu vào một thế giới cổ tích tuyệt vời thông qua cuốn sách ma thuật mà Jadoo phát hiện ra trong chuyến thăm công viên giải trí.', '2023-12-15', 'images/xinchaojadoo.jpg', 'https://www.youtube.com/watch?v=Yuy029-UlOE', 0);
 
 -- --------------------------------------------------------
 
@@ -282,7 +283,7 @@ CREATE TABLE `tbl_theatre` (
 --
 
 INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VALUES
-(3, 'Rạp CGV', 'CGV Vincom Royal City', 'Nguyễn Trãi', '2D', 691523),
+(3, 'Rạp CGV', 'CGV Vincom Royal City', 'Nguyễn Trãi', '2D/3D', 691523),
 (4, 'Cinemark', '3900 Dallas Parkway Suite 500 Plano', '12 Street, Ep', 'UD', 691523),
 (5, 'Midtown Cinemas', 'Aue', 'Charles Street, EUS', 'DMM', 691523),
 (6, 'Riverview Theater', '3800 42nd Ave S', 'Minneapolis, MN 55406', 'Minnesot', 224450);
@@ -377,7 +378,7 @@ ALTER TABLE `tbl_login`
 -- AUTO_INCREMENT cho bảng `tbl_movie`
 --
 ALTER TABLE `tbl_movie`
-  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_news`
