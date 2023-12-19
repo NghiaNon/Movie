@@ -191,7 +191,7 @@ body {
   background: #fff;
 }
 .header {
-  background: url(../images/hd-bg.png);
+  background-color: #000;
 }
 .header-top {
   border-bottom: 2px ridge #333;
@@ -527,7 +527,7 @@ p.s-img a:hover {
 }
 /*--Footer--*/
 .footer {
-  background: #222;
+  background: #000;
 }
 .footer-top {
   padding: 20px 0;
@@ -1096,6 +1096,7 @@ h4.h-text a:hover {
     padding: 0px;
   }
   .h-logo {
+    margin-top: 20px;
     width: 100%;
     float: none;
     text-align: center;

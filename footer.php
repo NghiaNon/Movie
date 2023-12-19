@@ -4,32 +4,30 @@
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="footer-nav">
 		                <ul>
-		                   <li><a href="index.php" style="text-decoration:none;">Home</a></li>
-			  		   <li><a href="movies_events.php" style="text-decoration:none;">Movies</a></li>
-			  		   <li><a href="login.php" style="text-decoration:none;">Login</a></li>
+		                   <li><a href="index.php" style="text-decoration:none;">Trang chủ</a></li>
+			  		   <li><a href="movies_events.php" style="text-decoration:none;">Danh sách phim</a></li>
+			  		   <li><a href="login.php" style="text-decoration:none;">Đăng nhập</a></li>
 		                   </ul>
 		              </div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="textcontact">
-						<p>Theatre Assistance<br>
-						Online Movie Theatre Booking System<br>
-						Ph: 6969786969<br>
+						<p>Hỗ trợ<br>
+						Hệ thống đặt vé xem phim trực tuyến<br>
+						Ph: 012345678<br>
 						</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="call_info">
-						<p class="txt_3">Call us toll free:</p>
-						<p class="txt_4">1 200 696 39669</p>
+						<p class="txt_3">Gọi cho tổng đài</p>
+						<p class="txt_4">1900000</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class=social>
-						<a href="#"><img src="images/fb.png" alt=""/></a>
-						<a href="#"><img src="images/tw.png" alt=""/></a>
-						<a href="#"><img src="images/dribble.png" alt=""/></a>
-						<a href="#"><img src="images/pinterest.png" alt=""/></a>
+						<a href="https://www.facebook.com/"><img src="images/fb.png" alt=""/></a>
+						<a href="https://twitter.com/"><img src="images/tw.png" alt=""/></a>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -56,9 +54,9 @@
                 position:relative;
                 padding:6px 15px;
                 left:-8px;
-                border:2px solid #ca072b;
-                background-color:#ca072b;
-                color:#fafafa;
+                border:2px solid #c7172a;
+                background-color:#c7172a;
+                color:#f7f8f9;
 }
 #button111:hover  {
                 background-color:#b70929;
