@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 19, 2023 lúc 11:26 AM
+-- Thời gian đã tạo: Th12 19, 2023 lúc 03:08 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -83,15 +83,14 @@ CREATE TABLE `tbl_login` (
 --
 
 INSERT INTO `tbl_login` (`id`, `user_id`, `username`, `password`, `user_type`) VALUES
-(1, 0, 'admin', 'password', 0),
-(2, 3, 'theatre', 'password', 1),
-(3, 4, 'theatre2', 'password', 1),
+(1, 0, 'admin1', 'password', 0),
+(2, 3, 'admin2', 'password', 1),
+(3, 4, 'admin3', 'password', 1),
 (12, 2, 'harryden@gmail.com', 'password', 2),
 (15, 14, 'USR295127', 'PWD195747', 1),
 (17, 4, 'bruno@gmail.com', 'password', 2),
 (20, 7, 'THR848514', 'PWD873718', 1),
-(22, 6, 'test@gmail.com', '1234567', 2),
-(23, 9, '', '', 1);
+(22, 6, 'test@gmail.com', '1234567', 2);
 
 -- --------------------------------------------------------
 
@@ -271,10 +270,10 @@ INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
 
 CREATE TABLE `tbl_theatre` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `address` varchar(100) NOT NULL,
-  `place` varchar(100) NOT NULL,
-  `state` varchar(50) NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `address` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `place` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `state` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `pin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -283,7 +282,7 @@ CREATE TABLE `tbl_theatre` (
 --
 
 INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VALUES
-(3, 'AMC Theatre', '11500 Ash St', 'Leawd', 'DM', 691523),
+(3, 'Rạp CGV', 'CGV Vincom Royal City', 'Nguyễn Trãi', '2D', 691523),
 (4, 'Cinemark', '3900 Dallas Parkway Suite 500 Plano', '12 Street, Ep', 'UD', 691523),
 (5, 'Midtown Cinemas', 'Aue', 'Charles Street, EUS', 'DMM', 691523),
 (6, 'Riverview Theater', '3800 42nd Ave S', 'Minneapolis, MN 55406', 'Minnesot', 224450);
