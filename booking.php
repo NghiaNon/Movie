@@ -17,7 +17,7 @@ if(!isset($_SESSION['user']))
 									<img src="<?php echo $movie['image']; ?>" alt=""/>
 								</div>
 								<div class="desc span_3_of_2">
-									<p class="p-link" style="font-size:15px"><b>Cast : </b><?php echo $movie['cast']; ?></p>
+									<p class="p-link" style="font-size:15px"><b>Diễn viên : </b><?php echo $movie['cast']; ?></p>
 									<p class="p-link" style="font-size:15px"><b>Release Date : </b><?php echo date('d-M-Y',strtotime($movie['release_date'])); ?></p>
 									<p style="font-size:15px"><?php echo $movie['desc']; ?></p>
 									<a href="<?php echo $movie['video_url']; ?>" target="_blank" class="watch_but">Watch Trailer</a>
