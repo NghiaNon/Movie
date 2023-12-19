@@ -1,5 +1,5 @@
 <div class="listview_1_of_3 images_1_of_3">
-	<h2 style="color:#555;">Films in Theaters</h2>
+	<h2 style="color:#555;">Phim chiếu rạp</h2>
 
 	<?php
 	$today = date("Y-m-d");
@@ -17,9 +17,9 @@
 			<div class="text list_1_of_2">
 				<div class="extra-wrap1">
 					<a href="about.php?id=<?php echo $m['movie_id']; ?>" class="link4" style="text-decoration:none; font-size:18px;"><?php echo $m['movie_name']; ?></a><br>
-					<span class="data">Release Date: <?php echo $m['release_date']; ?></span><br>
-					Cast: <Span class="data"><?php echo $m['cast']; ?></span><br>
-					Description: <span" class="color2" style="text-decoration:none;"><?php echo $m['desc']; ?></span><br>
+					<span class="data">Ngày ra mắt: <?php echo $m['release_date']; ?></span><br>
+					Diễn viên: <Span class="data"><?php echo $m['cast']; ?></span><br>
+					Mô tả: <span" class="color2" style="text-decoration:none;"><?php echo $m['desc']; ?></span><br>
 				</div>
 			</div>
 
