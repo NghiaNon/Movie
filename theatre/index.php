@@ -34,7 +34,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <?php session_start(); include('../msgbox.php');?>
-    <p class="login-box-msg">Please login to start your session</p>
+    <p class="login-box-msg">Vui lòng đăng nhập tài khoản Admin 2</p>
 <form action="pages/process_login.php" method="post">
       <div class="form-group has-feedback">
         <input name="Email" type="text" size="25" placeholder="Username" class="form-control"/>
@@ -49,7 +49,7 @@
       </div>
     </form>
 
-    <a href="../admin/index.php">Đi tới Admin Page</a>
+    <a href="../admin/index.php">Đi tới Admin 1</a>
 
   </div>
   <!-- /.login-box-body -->
