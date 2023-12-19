@@ -44,7 +44,8 @@ Cuối cùng nhưng không kém phần quan trọng, một bảng điều khiể
 # Cách chạy chương trình
 - Cài đặt máy chủ Apache. (khuyên dùng XAMPP)
 - Cài đặt máy chủ MySQL.
-- Nhập cơ sở dữ liệu vào thư mục htdocs của máy chủ Apache.
+- Lưu dự án về máy chủ (nếu dùng XAMPP thì lưu vào thư mục htdocs trên XAMPP).
+- Nhập cơ sở dữ liệu vào hệ quản trị cơ sở dữ liệu, ở đây chúng tôi khuyên dùng Phpmyadmin được tích hợp sẵn trên XAMPP.
 - Chạy máy chủ Apache và MySQL.
 - Mở trình duyệt của bạn và nhập url cho thư mục vừa tạo.
 - Theo mặc định, điều này sẽ mở ra Index.php và bạn có thể điều hướng từ đây bằng giao diện dựa trên web.
