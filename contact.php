@@ -83,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<span><textarea required name="subect"> </textarea></span>
 								</div>
 								<div>
-									<span><input type="submit" value="Gửi" style="backgroud-color:green;"></span>
+									<span><input type="submit" value="Gửi" style="background-color:green;"></span>
 								</div>
 							</form>
 						</div>

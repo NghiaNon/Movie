@@ -13,7 +13,7 @@ $frm = new formBuilder;
     <div class="content-top" style="min-height:300px;padding:50px">
       <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
-          <div class="panel-heading">Đăng kí</div>
+          <div class="panel-heading">Đăng ký</div>
           <div class="panel-body">
             <form action="process_registration.php" method="post" id="form1">
               <div class="form-group has-feedback">
@@ -63,7 +63,7 @@ $frm = new formBuilder;
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary">Đăng kí</button>
+                <button type="submit" class="btn btn-primary" style="background-color:green;">Đăng ký</button>
               </div>
           </div>
         </div>

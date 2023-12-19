@@ -10,7 +10,7 @@ $movie = mysqli_fetch_array($qry2);
 		<div class="content-top">
 			<div class="section group">
 				<div class="about span_1_of_2">
-					<h3 style="color:black;" class="text-center">BOOKING HISTORY</h3>
+					<h3 style="color:black;" class="text-center">LỊCH SỬ ĐẶT VÉ</h3>
 					<?php include('msgbox.php'); ?>
 					<?php
 					$bk = mysqli_query($con, "select * from tbl_bookings where user_id='" . $_SESSION['user'] . "'");
@@ -18,13 +18,13 @@ $movie = mysqli_fetch_array($qry2);
 					?>
 						<table class="table table-bordered">
 							<thead>
-								<th>Booking Id</th>
-								<th>Movie</th>
-								<th>Theatre</th>
-								<th>Screen</th>
-								<th>Show</th>
-								<th>Seats</th>
-								<th>Amount</th>
+								<th>ID vé</th>
+								<th>Phim</th>
+								<th>Rạp</th>
+								<th>Màn Hình</th>
+								<th>Buổi chiếu</th>
+								<th>Ghế ngồi</th>
+								<th>Số lượng</th>
 								<th></th>
 							</thead>
 							<tbody>
@@ -81,8 +81,8 @@ $movie = mysqli_fetch_array($qry2);
 					<?php
 					} else {
 					?>
-						<h3 style="color:red;" class="text-center">No Previous Bookings Found!</h3>
-						<p>Once you start booking movie tickets with this account, you'll be able to see all the booking history.</p>
+						<h3 style="color:red;" class="text-center">Không Tìm Thấy Vé Nào Bạn Đã Đặt!</h3>
+						<p>Bạn sẽ có thể xem toàn bộ lịch sử đặt vé khi bạn bắt đầu đặt vé xem phim bằng tài khoản này.</p>
 					<?php
 					}
 					?>
