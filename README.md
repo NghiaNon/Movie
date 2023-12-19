@@ -45,8 +45,8 @@ Cuối cùng nhưng không kém phần quan trọng, một bảng điều khiể
 - Cài đặt máy chủ Apache. (khuyên dùng XAMPP)
 - Cài đặt máy chủ MySQL.
 - Lưu dự án về máy chủ (nếu dùng XAMPP thì lưu vào thư mục htdocs trên XAMPP).
-- Nhập cơ sở dữ liệu vào hệ quản trị cơ sở dữ liệu, ở đây chúng tôi khuyên dùng Phpmyadmin được tích hợp sẵn trên XAMPP.
 - Chạy máy chủ Apache và MySQL.
+- Sử dụng Phpmyadmin được tích hợp từ XAMPP, tạo cơ sở dữ liệu với tên như file sql trong thư mục DATABASE FILE và import file sql trên vào cơ sở dữ liệu này.
 - Mở trình duyệt của bạn và nhập url cho thư mục vừa tạo.
 - Theo mặc định, điều này sẽ mở ra Index.php và bạn có thể điều hướng từ đây bằng giao diện dựa trên web.
 - Đảm bảo đăng ký làm người dùng và đăng nhập để bắt đầu đặt vé.
