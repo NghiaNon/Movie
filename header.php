@@ -54,7 +54,7 @@ date_default_timezone_set('Asia/Kathmandu');
 
 							<input type="text" placeholder="Nhập tên phim mà bạn muốn tìm" style="height:30px;width:300px" required id="search111" name="search">
 
-							<input type="submit" value="Search" style="height:34px;padding-top:3px" id="button111">
+							<input type="submit" value="Search" style="height:31px;padding-top:4px" id="button111">
 						</div>
 
 					</fieldset>
