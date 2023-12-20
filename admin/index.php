@@ -29,7 +29,7 @@
     <div class="login-logo">
       <a>ADMIN 1</a> 
       <br>
-      <b>QUẢN TRỊ VIÊN 1</b>
+      <b>QUẢN TRỊ VIÊN</b>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
