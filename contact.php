@@ -74,8 +74,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<span><input type="text" value="" required name="email"></span>
 								</div>
 								<div>
-    								<span><label for="phone">Số điện thoại</label></span>
-    								<span><input type="tel" value="" required name="phone" id="phone"></span>
+									<span><label for="phone">Số điện thoại</label></span>
+									<span><input type="tel" value="" required name="phone" id="phone"></span>
 								</div>
 
 								<div>
