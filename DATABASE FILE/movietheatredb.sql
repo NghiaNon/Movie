@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 21, 2023 lúc 07:38 AM
+-- Thời gian đã tạo: Th12 21, 2023 lúc 04:02 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -46,9 +46,10 @@ CREATE TABLE `tbl_bookings` (
 --
 
 INSERT INTO `tbl_bookings` (`book_id`, `ticket_id`, `t_id`, `user_id`, `show_id`, `screen_id`, `no_seats`, `amount`, `ticket_date`, `date`, `status`) VALUES
-(12, 'BKID6369842', 4, 4, 17, 3, 1, 380, '2021-04-15', '2021-04-15', 1),
-(13, 'BKID2313964', 6, 5, 21, 6, 4, 2400, '2021-04-16', '2021-04-15', 1),
-(14, 'BKID1766021', 6, 5, 22, 6, 2, 1200, '2021-04-16', '2021-04-16', 1);
+(12, 'BIDV6369842', 4, 4, 17, 3, 1, 380, '2023-12-15', '2023-12-16', 1),
+(13, 'BIDV2313964', 6, 5, 21, 6, 4, 2400, '2023-12-16', '2023-12-15', 1),
+(14, 'BIDV1766021', 6, 5, 22, 6, 2, 1200, '2023-12-16', '2023-12-27', 1),
+(18, 'BIDV1590524', 6, 6, 22, 6, 1, 150000, '2023-12-21', '2023-12-21', 1);
 
 -- --------------------------------------------------------
 
@@ -182,7 +183,7 @@ CREATE TABLE `tbl_screens` (
   `t_id` int(11) NOT NULL COMMENT 'theatre id',
   `screen_name` varchar(110) NOT NULL,
   `seats` int(11) NOT NULL COMMENT 'number of seats',
-  `charge` int(11) NOT NULL
+  `charge` decimal(11,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
@@ -190,12 +191,12 @@ CREATE TABLE `tbl_screens` (
 --
 
 INSERT INTO `tbl_screens` (`screen_id`, `t_id`, `screen_name`, `seats`, `charge`) VALUES
-(1, 3, 'Phòng 1', 100, 350),
-(2, 3, 'Phòng 2', 150, 310),
-(3, 4, 'Phòng 3', 200, 380),
-(4, 14, 'Phòng 4', 34, 250),
-(5, 6, 'Phòng VIP 1', 150, 300),
-(6, 6, 'Phòng VIP 2', 200, 600);
+(1, 3, 'Phòng 1', 100, 50000),
+(2, 3, 'Phòng 2', 150, 60000),
+(3, 4, 'Phòng 3', 200, 55000),
+(4, 14, 'Phòng 4', 34, 65000),
+(5, 6, 'Phòng VIP 1', 150, 100000),
+(6, 6, 'Phòng VIP 2', 200, 150000);
 
 -- --------------------------------------------------------
 
@@ -218,10 +219,10 @@ CREATE TABLE `tbl_shows` (
 --
 
 INSERT INTO `tbl_shows` (`s_id`, `st_id`, `theatre_id`, `movie_id`, `start_date`, `status`, `r_status`) VALUES
-(19, 15, 6, 11, '2021-04-15', 0, 1),
-(20, 20, 6, 13, '2021-04-15', 0, 1),
-(21, 19, 6, 12, '2021-03-31', 1, 1),
-(22, 18, 6, 17, '2021-04-16', 1, 1);
+(19, 15, 6, 11, '2023-12-15', 0, 1),
+(20, 20, 6, 13, '2023-12-15', 0, 1),
+(21, 19, 6, 12, '2023-12-15', 1, 1),
+(22, 18, 6, 17, '2023-12-14', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -245,23 +246,23 @@ INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
 (2, 1, 'Chiều', '14:00:00'),
 (3, 1, 'Tối', '18:00:00'),
 (4, 1, 'Đêm', '21:00:00'),
-(5, 2, 'Noon', '10:00:00'),
-(6, 2, 'Matinee', '14:00:00'),
-(7, 2, 'First', '18:00:00'),
-(8, 2, 'Second', '21:00:00'),
-(9, 3, 'Noon', '10:00:00'),
-(10, 3, 'Matinee', '14:00:00'),
-(11, 3, 'First', '18:00:00'),
-(12, 3, 'Second', '21:00:00'),
-(14, 4, 'Noon', '12:03:00'),
-(15, 5, 'First', '00:08:00'),
-(16, 5, 'Second', '15:10:00'),
-(17, 5, 'Others', '18:10:00'),
-(18, 6, 'Noon', '00:02:00'),
-(19, 6, 'First', '06:35:00'),
-(20, 6, 'Second', '09:18:00'),
-(21, 5, 'Matinee', '20:04:00'),
-(22, 7, 'First', '02:12:00');
+(5, 2, 'Trưa', '10:00:00'),
+(6, 2, 'Chiều', '14:00:00'),
+(7, 2, 'Tối', '18:00:00'),
+(8, 2, 'Đêm', '21:00:00'),
+(9, 3, 'Trưa', '10:00:00'),
+(10, 3, 'Chiều', '14:00:00'),
+(11, 3, 'Tối', '18:00:00'),
+(12, 3, 'Đêm', '21:00:00'),
+(14, 4, 'Trưa', '12:03:00'),
+(15, 5, 'Sáng', '08:00:00'),
+(16, 5, 'Chiều', '15:10:00'),
+(17, 5, 'Tối', '18:10:00'),
+(18, 6, 'Trưa', '14:00:00'),
+(19, 6, 'Sáng', '06:35:00'),
+(20, 6, 'Sáng', '09:18:00'),
+(21, 5, 'Đêm', '20:04:00'),
+(22, 7, 'Chiều', '02:12:00');
 
 -- --------------------------------------------------------
 
@@ -360,7 +361,7 @@ ALTER TABLE `tbl_theatre`
 -- AUTO_INCREMENT cho bảng `tbl_bookings`
 --
 ALTER TABLE `tbl_bookings`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_contact`
