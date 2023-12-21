@@ -65,7 +65,7 @@ date_default_timezone_set('Asia/Kathmandu');
 		<script>
 			function myFunction() {
 				if ($('#hero-demo').val() == "") {
-					alert("Please enter movie name...");
+					alert("Vui lòng nhập tên phim...");
 					return false;
 				} else {
 					return true;

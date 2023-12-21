@@ -101,16 +101,16 @@ header('location:bank.php');
                     verbose: false,
                     validators: {
                         notEmpty: {
-                            message: 'Mã cvv không được bỏ trống!!'
+                            message: 'Mã CVV không được bỏ trống!!'
                         },
                         stringLength: {
                             min: 3,
                             max: 3,
-                            message: 'Mã cvv cần 3 ký tự!!'
+                            message: 'Mã CVV cần 3 ký tự!!'
                         },
                         regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Vui lòng nhập mã cvv!!'
+                            message: 'Vui lòng nhập mã CVV!!'
                         }
                     }
                 }
