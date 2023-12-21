@@ -14,20 +14,20 @@ $frm = new formBuilder;
 <div class="content">
     <div class="wrap">
         <div class="content-top">
-            <h3>Payment</h3>
+            <h3>Thanh toán</h3>
             <form action="bank.php" method="post" id="form1">
                 <div class="col-md-4 col-md-offset-4" style="margin-bottom:50px">
                     <div class="form-group">
-                        <label class="control-label">Name on Card</label>
+                        <label class="control-label">Tên thẻ</label>
                         <input type="text" class="form-control" name="name">
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Card Number</label>
+                        <label class="control-label">Số thẻ</label>
                         <input type="text" class="form-control" name="number" required title="Enter 16 digit card number">
 
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Expiration date</label>
+                        <label class="control-label">Ngày hết hạn</label>
                         <input type="date" class="form-control" name="date">
                     </div>
                     <div class="form-group">
@@ -35,7 +35,7 @@ $frm = new formBuilder;
                         <input type="text" class="form-control" name="cvv">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-success">Make Payment</button>
+                        <button class="btn btn-success">Thánh toán</button>
             </form>
         </div>
     </div>
