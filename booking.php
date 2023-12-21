@@ -144,7 +144,7 @@ if(!isset($_SESSION['user']))
 	$('#seats').change(function(){
 		var charge=<?php echo $screen['charge'];?>;
 		amount=charge*$(this).val();
-		$('#amount').html("Rs "+amount);
+		$('#amount').html(amount+ "VNĐ ");
 		$('#hm').val(amount);
 	});
 </script>
