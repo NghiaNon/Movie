@@ -22,7 +22,7 @@
 				<div class="call_info">
 					<p class="txt_3">Tư vấn miễn phí</p>
 					<p class="txt_4">1900000</p>
-					<a href="contact.php">Liên hệ</a>
+					<a href="contact.php" style="text-decoration: none; color:#fff;">Liên hệ</a>
 				</div>
 			</div>
 			<div class="col_1_of_4 span_1_of_4">
