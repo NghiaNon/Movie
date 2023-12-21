@@ -97,7 +97,8 @@ if(!isset($_SESSION['user']))
 											Thời gian chiếu 
 										</td>
 										<td>
-											<?php echo date('h:i A',strtotime($ttme['start_time']))." ".$ttme['name'];?> Giờ
+											<?php echo date('h:i A',strtotime($ttme['start_time'])); 
+											// ." ".$ttme['name']; ?>
 										</td>
 									</tr>
 									<tr>
