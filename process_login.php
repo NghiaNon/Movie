@@ -18,6 +18,6 @@ if (mysqli_num_rows($qry)) {
 		header("location:login.php");
 	}
 } else {
-	$_SESSION['error'] = "Login Failed!";
+	$_SESSION['error'] = "Vui lòng đăng nhập lại!";
 	header("location:login.php");
 }
