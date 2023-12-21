@@ -118,11 +118,11 @@ if(!isset($_SESSION['user']))
 											Giá vé
 										</td>
 										<td id="amount" style="font-weight:bold;font-size:18px">
-											VNĐ <?php echo $screen['charge'];?>
+											<?php echo $screen['charge'];?> VNĐ
 										</td>
 									</tr>
 									<tr>
-										<td colspan="2"><?php if($avl[0]==$screen['seats']){?><button type="button" class="btn btn-danger" style="width:100%">House Full</button><?php } else { ?>
+										<td colspan="2"><?php if($avl[0]==$screen['seats']){?><button type="button" class="btn btn-danger" style="width:100%">Đã đầy</button><?php } else { ?>
 										<button class="btn btn-info" style="width:100%">Đặt ngay </button>
 										<?php } ?>
 										</form></td>
