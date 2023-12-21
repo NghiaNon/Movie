@@ -24,7 +24,7 @@ if (!isset($_SESSION['user'])) {
 								<th>Màn Hình</th>
 								<th>Buổi chiếu</th>
 								<th>Ghế ngồi</th>
-								<th>Số lượng</th>
+								<th>Đơn giá</th>
 								<th></th>
 							</thead>
 							<tbody>
@@ -59,7 +59,11 @@ if (!isset($_SESSION['user'])) {
 											<?php echo $bkg['no_seats']; ?>
 										</td>
 										<td>
-											Rs. <?php echo $bkg['amount']; ?>
+										<dd>
+  											<?php echo $bkg['amount']; ?>
+  											<span style="float: right; margin-right: 10px;">VNĐ</span>
+											</dd>
+
 										</td>
 										<td>
 											<?php if ($bkg['ticket_date'] < date('Y-m-d')) {
@@ -99,7 +103,7 @@ if (!isset($_SESSION['user'])) {
 	$('#seats').change(function() {
 		var charge = <?php echo $screen['charge']; ?>;
 		amount = charge * $(this).val();
-		$('#amount').html("Rs " + amount);
+		$('#amount').html(amount + "VNĐ");
 		$('#hm').val(amount);
 	});
 </script>

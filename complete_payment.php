@@ -9,11 +9,11 @@ extract($_POST);
 
 //OTP Code
 if ($otp == "123456") {
-    $bookid = "BKID" . rand(1000000, 9999999);
+    $bookid = "BIDV" . rand(1000000, 9999999);
     mysqli_query($con, "INSERT into tbl_bookings values(NULL,'$bookid','" . $_SESSION['theatre'] . "','" . $_SESSION['user'] . "','" . $_SESSION['show'] . "','" . $_SESSION['screen'] . "','" . $_SESSION['seats'] . "','" . $_SESSION['amount'] . "','" . $_SESSION['date'] . "',CURDATE(),'1')");
-    $_SESSION['success'] = "Bookings Done!";
+    $_SESSION['success'] = "Đặt vé thành công!";
 } else {
-    $_SESSION['error'] = "Payment Failed";
+    $_SESSION['error'] = "Thanh toán thất bại";
 }
 ?>
 

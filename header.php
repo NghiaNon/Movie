@@ -26,7 +26,7 @@ date_default_timezone_set('Asia/Kathmandu');
 		<div class="header-top">
 			<div class="wrap">
 				<div class="h-logo">
-					<a href="index.php"><img src="images/logo.png" alt="Logo Image Here" width="100" height="100" /></a>
+					<a href="index.php"><img src="images/logo.png" alt="Logo Image Here" width="140" height="140" /></a>
 				</div>
 				<div class="nav-wrap">
 					<ul class="group" id="example-one">

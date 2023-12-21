@@ -22,7 +22,7 @@ extract($_POST);
   <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
   <meta http-equiv="pragma" content="no-cache" />
 
-  <title>OMTBS</title>
+  <title>Thanh toán</title>
   <link href="css/bank.css" rel="stylesheet" type="text/css" />
 
 
@@ -42,7 +42,10 @@ extract($_POST);
       <dt>Phương Thức Thanh Toán</dt>
       <dd>BIDV</dd>
       <dt>Đơn Giá</dt>
-      <dd>INR <?php echo  $_SESSION['amount']; ?></dd>
+      <dd>
+      <?php echo $_SESSION['amount']; ?>
+      <span style="float: right; margin-right: 120px;">VNĐ</span>
+      </dd>
       <dt>Thẻ ghi nợ</dt>
       <dd><?php echo  $number; ?></%>
       </dd>
