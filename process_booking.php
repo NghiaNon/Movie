@@ -18,7 +18,7 @@ $frm = new formBuilder;
             <form action="bank.php" method="post" id="form1">
                 <div class="col-md-4 col-md-offset-4" style="margin-bottom:50px">
                     <div class="form-group">
-                        <label class="control-label">Tên thẻ</label>
+                        <label class="control-label">Tên chủ thẻ</label>
                         <input type="text" class="form-control" name="name">
                     </div>
                     <div class="form-group">
@@ -35,7 +35,7 @@ $frm = new formBuilder;
                         <input type="text" class="form-control" name="cvv">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-success">Thánh toán</button>
+                        <button class="btn btn-success">Thanh toán</button>
             </form>
         </div>
     </div>
@@ -64,11 +64,11 @@ header('location:bank.php');
                     verbose: false,
                     validators: {
                         notEmpty: {
-                            message: 'The Name is required and can\'t be empty'
+                            message: 'Tên chủ thẻ không được bỏ trống!!'
                         },
                         regexp: {
                             regexp: /^[a-zA-Z ]+$/,
-                            message: 'The Name can only consist of alphabets'
+                            message: 'Tên chủ thẻ chỉ có thể được viết trong bảng chữ cái!!'
                         }
                     }
                 },
@@ -76,16 +76,16 @@ header('location:bank.php');
                     verbose: false,
                     validators: {
                         notEmpty: {
-                            message: 'The Card Number is required and can\'t be empty'
+                            message: 'Số thẻ không được bỏ trống!!'
                         },
                         stringLength: {
                             min: 16,
                             max: 16,
-                            message: 'The Card Number must 16 characters long'
+                            message: 'Số thẻ ít nhất 16 ký tự!!'
                         },
                         regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Enter a valid Card Number'
+                            message: 'Vui lòng nhập số thẻ hợp lệ!!'
                         }
                     }
                 },
@@ -93,7 +93,7 @@ header('location:bank.php');
                     verbose: false,
                     validators: {
                         notEmpty: {
-                            message: 'The Expire Date is required and can\'t be empty'
+                            message: 'Ngày hết hạn không được bỏ trống!!'
                         }
                     }
                 },
@@ -101,16 +101,16 @@ header('location:bank.php');
                     verbose: false,
                     validators: {
                         notEmpty: {
-                            message: 'The cvv is required and can\'t be empty'
+                            message: 'Mã cvv không được bỏ trống!!'
                         },
                         stringLength: {
                             min: 3,
                             max: 3,
-                            message: 'The cvv must 3 characters long'
+                            message: 'Mã cvv cần 3 ký tự!!'
                         },
                         regexp: {
                             regexp: /^[0-9 ]+$/,
-                            message: 'Enter a valid cvv'
+                            message: 'Vui lòng nhập mã cvv!!'
                         }
                     }
                 }
