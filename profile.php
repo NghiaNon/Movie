@@ -67,7 +67,7 @@ if (!isset($_SESSION['user'])) {
 												<i class="glyphicon glyphicon-ok"></i>
 											<?php
 											} else { ?>
-												<a href="cancel.php?id=<?php echo $bkg['book_id']; ?>" style="text-decoration:none; color:red;">Cancel</a>
+												<a href="cancel.php?id=<?php echo $bkg['book_id']; ?>" style="text-decoration:none; color:red;">Thoát</a>
 											<?php
 											}
 											?>
