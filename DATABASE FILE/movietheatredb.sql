@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 19, 2023 lúc 05:02 PM
+-- Thời gian đã tạo: Th12 21, 2023 lúc 07:38 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -190,12 +190,12 @@ CREATE TABLE `tbl_screens` (
 --
 
 INSERT INTO `tbl_screens` (`screen_id`, `t_id`, `screen_name`, `seats`, `charge`) VALUES
-(1, 3, 'Screen 1', 100, 350),
-(2, 3, 'Screen 2', 150, 310),
-(3, 4, 'Screen 1', 200, 380),
-(4, 14, 'Screen1', 34, 250),
-(5, 6, 'Demo Screen', 150, 300),
-(6, 6, 'IMX Screen', 200, 600);
+(1, 3, 'Phòng 1', 100, 350),
+(2, 3, 'Phòng 2', 150, 310),
+(3, 4, 'Phòng 3', 200, 380),
+(4, 14, 'Phòng 4', 34, 250),
+(5, 6, 'Phòng VIP 1', 150, 300),
+(6, 6, 'Phòng VIP 2', 200, 600);
 
 -- --------------------------------------------------------
 
@@ -232,7 +232,7 @@ INSERT INTO `tbl_shows` (`s_id`, `st_id`, `theatre_id`, `movie_id`, `start_date`
 CREATE TABLE `tbl_show_time` (
   `st_id` int(11) NOT NULL,
   `screen_id` int(11) NOT NULL,
-  `name` varchar(40) NOT NULL COMMENT 'noon,second,etc',
+  `name` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL COMMENT 'noon,second,etc',
   `start_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -241,10 +241,10 @@ CREATE TABLE `tbl_show_time` (
 --
 
 INSERT INTO `tbl_show_time` (`st_id`, `screen_id`, `name`, `start_time`) VALUES
-(1, 1, 'Noon', '10:00:00'),
-(2, 1, 'Matinee', '14:00:00'),
-(3, 1, 'First', '18:00:00'),
-(4, 1, 'Second', '21:00:00'),
+(1, 1, 'Trưa', '10:00:00'),
+(2, 1, 'Chiều', '14:00:00'),
+(3, 1, 'Tối', '18:00:00'),
+(4, 1, 'Đêm', '21:00:00'),
 (5, 2, 'Noon', '10:00:00'),
 (6, 2, 'Matinee', '14:00:00'),
 (7, 2, 'First', '18:00:00'),
@@ -284,9 +284,9 @@ CREATE TABLE `tbl_theatre` (
 
 INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VALUES
 (3, 'Rạp CGV', 'CGV Vincom Royal City', 'Nguyễn Trãi', '2D/3D', 691523),
-(4, 'Cinemark', '3900 Dallas Parkway Suite 500 Plano', '12 Street, Ep', 'UD', 691523),
-(5, 'Midtown Cinemas', 'Aue', 'Charles Street, EUS', 'DMM', 691523),
-(6, 'Riverview Theater', '3800 42nd Ave S', 'Minneapolis, MN 55406', 'Minnesot', 224450);
+(4, 'CGV Hà Đông', 'TTTM AEON MALL HÀ ĐÔNG', 'Hà Nội', '2D/3D', 691523),
+(5, 'CGV Mỹ Đình', 'Nam Từ Liêm\r\n', 'Hà Nội', '2D/3D', 691523),
+(6, 'CGV Thanh Xuân', 'Lê Văn Lương', 'Hà Nội', '2D/3D', 224450);
 
 --
 -- Chỉ mục cho các bảng đã đổ

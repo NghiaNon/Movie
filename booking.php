@@ -42,7 +42,7 @@ if(!isset($_SESSION['user']))
 										</tr>
 										<tr>
 											<td>
-												Screen
+												Phòng
 											</td>
 										<td>
 											<?php 
@@ -97,7 +97,7 @@ if(!isset($_SESSION['user']))
 											Thời gian chiếu 
 										</td>
 										<td>
-											<?php echo date('h:i A',strtotime($ttme['start_time']))." ".$ttme['name'];?> Show
+											<?php echo date('h:i A',strtotime($ttme['start_time']))." ".$ttme['name'];?> Giờ
 										</td>
 									</tr>
 									<tr>
@@ -117,7 +117,7 @@ if(!isset($_SESSION['user']))
 											Giá vé
 										</td>
 										<td id="amount" style="font-weight:bold;font-size:18px">
-											Rs <?php echo $screen['charge'];?>
+											VNĐ <?php echo $screen['charge'];?>
 										</td>
 									</tr>
 									<tr>
