@@ -20,9 +20,10 @@ Dự án hệ thống này tập trung chủ yếu vào việc giao dịch với
 - Sắp xếp màn hình phim và thời gian chiếu
 - Liên hệ với quản lý nếu có vấn đề
 - Bắt đầu và dừng chương trình đang chạy
-  
+
 # Cách chạy chương trình
 - Cài đặt máy chủ Apache (Khuyên dùng XAMPP).
+- Đề xuất phiên bản PHP sử dụng là bản 5.6.3.
 - Cài đặt máy chủ MySQL (Nếu dùng XAMPP thì đã có sẵn Phpmyadmin).
 - Lưu dự án về máy chủ (Nếu dùng XAMPP thì lưu vào thư mục htdocs trên XAMPP).
 - Chạy máy chủ Apache và MySQL.
