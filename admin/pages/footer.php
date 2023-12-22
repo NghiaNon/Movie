@@ -4,7 +4,7 @@
   <div class="pull-right hidden-xs">
     <b>Version</b> 2.3.8
   </div>
-  <strong>&copy; <?php echo date("Y"); ?> <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> Tất cả các quyền
+  <strong>&copy; <?php echo date("Y"); ?> <a href="http://almsaeedstudio.com">Studio</a>.</strong> Tất cả các quyền
 </footer>
 
 <!-- Control Sidebar -->

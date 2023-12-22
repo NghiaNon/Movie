@@ -33,32 +33,32 @@ $frm = new formBuilder;
           <div class="form-group">
             <label class="control-label">Tên phim</label>
             <input type="text" name="name" class="form-control" />
-            <?php $frm->validate("name", array("required", "label" => "Theatre Name")); // Validating form using form builder written in form.php 
+            <?php $frm->validate("name", array("required", "label" => "Theatre Name")); 
             ?>
           </div>
           <div class="form-group">
             <label class="control-label">Địa chỉ rạp phim</label>
             <input type="text" name="address" class="form-control" />
-            <?php $frm->validate("address", array("required", "label" => "Theatre Address")); // Validating form using form builder written in form.php 
+            <?php $frm->validate("address", array("required", "label" => "Theatre Address"));  
             ?>
           </div>
           <div class="form-group">
             <label class="control-label">Vị trí</label>
             <!-- <input type="text" name="place" id="autocomplete" class="form-control"> -->
             <input type="text" name="place" class="form-control">
-            <?php $frm->validate("place", array("required", "label" => "Place")); // Validating form using form builder written in form.php 
+            <?php $frm->validate("place", array("required", "label" => "Place")); 
             ?>
           </div>
           <div class="form-group">
             <label class="control-label">Trạng thái</label>
             <input type="text" name="state" id="administrative_area_level_1" s placeholder="2D/3D/4D" class="form-control">
-            <?php $frm->validate("state", array("required", "label" => "State")); // Validating form using form builder written in form.php 
+            <?php $frm->validate("state", array("required", "label" => "State"));  
             ?>
           </div>
           <div class="form-group">
             <label class="control-label">Mã Pin</label>
             <input type="text" name="pin" id="postal_code" s placeholder="6 số" class="form-control">
-            <?php $frm->validate("pin", array("required", "label" => "Pin Code", "regexp" => "pin")); // Validating form using form builder written in form.php 
+            <?php $frm->validate("pin", array("required", "label" => "Pin Code", "regexp" => "pin")); 
             ?>
           </div>
           <?php
@@ -70,10 +70,10 @@ $frm = new formBuilder;
           }
           ?>
           <?php echo $username ?>">
-          <?php $frm->validate("username", array("required", "label" => "Username")); // Validating form using form builder written in form.php 
+          <?php $frm->validate("username", array("required", "label" => "Username"));  
           ?>
           <?php echo "PWD" . rand(123456, 999999); ?>
-          <?php $frm->validate("password", array("required", "label" => "Password")); // Validating form using form builder written in form.php 
+          <?php $frm->validate("password", array("required", "label" => "Password"));  
           ?>
 
           <div class="form-group">
