@@ -49,7 +49,7 @@
         </div>
       </form>
 
-      <a href="../theatre/index.php">Đi tới Admin 2</a>
+      <a href="../theatre/index.php">Đi tới Admin 2</a> <a href="../login.php" style="margin-left:90px;">Trở lại trang người dùng</a>
 
     </div>
     <!-- /.login-box-body -->

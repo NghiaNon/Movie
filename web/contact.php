@@ -66,7 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<h3>Contact Us</h3>
 							<form action="process_contact.php" method="post" name="form11">
 								<div>
-									<span><label>NAME</label></span>
+									<span><label>Tên<nav></nav></label></span>
 									<span><input type="text" value="" required name="name"></span>
 								</div>
 								<div>
@@ -74,15 +74,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<span><input type="text" value="" required name="email"></span>
 								</div>
 								<div>
-									<span><label>MOBILE.NO</label></span>
+									<span><label>Số điện thoại</label></span>
 									<span><input type="number" value="" required name="mobile"></span>
 								</div>
 								<div>
-									<span><label>SUBJECT</label></span>
+									<span><label>Mô Tả</label></span>
 									<span><textarea required name="subect"> </textarea></span>
 								</div>
 								<div>
-									<span><input type="submit">Submit</span>
+									<span><input type="submit">Gửi</span>
 								</div>
 							</form>
 						</div>
@@ -95,13 +95,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 						<div class="company_address">
-							<h3>Company Information :</h3>
-							<p>500 Lorem Ipsum Dolor Sit,</p>
-							<p>22-56-2-9 Sit Amet, Lorem,</p>
-							<p>Phone:(00) 222 666 444</p>
+							<h3>Thông Tin Rạp:</h3>
+							<p>334 Nguyễn Trãi,</p>
+							<p>Thanh Xuân, Hà Nội</p>
+							<p>Phone:(00) 111 333 555</p>
 							<p>Fax: (000) 000 00 00 0</p>
-							<p>Email: <span>info@mycompany.com</span></p>
-							<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+							<p>Email: <span>thongtin@congty.com</span></p>
+							<p>Theo dõi chúng tôi: <span>Facebook</span>, <span>Twitter</span></p>
 						</div>
 					</div>
 				</div>
@@ -114,35 +114,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="footer-top">
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="footer-nav">
-						<ul>
-							<li><a href="">Our Tips of gallery Template diam</a></li>
-							<li><a href="">Our Tips of gallery Template diam</a></li>
-							<li><a href="">Our Tips of gallery Template diam</a></li>
-							<li><a href="">Our Tips of gallery Template diam</a></li>
-						</ul>
+						
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="textcontact">
-						<p>consectetuer adipiscing elit,<br>
-							consectetuer<br>
-							Ph: +1-800-234-52589.<br>
-							Email:Support(at)Fotoria-scope.com<br>
+						<p>Cộng Tác viên,<br>
+							Tổng đài viên<br>
+							SĐT: +1-125-234-456789.<br>
+							Email:hotro(at)hanoi.com<br>
 						</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class="call_info">
-						<p class="txt_3">Call us toll free:</p>
+						<p class="txt_3">Tư Vấn miễn phí:</p>
 						<p class="txt_4">1 800 234 23456</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 					<div class=social>
-						<a href="#"><img src="images/fb.png" alt="" /></a>
-						<a href="#"><img src="images/tw.png" alt="" /></a>
-						<a href="#"><img src="images/dribble.png" alt="" /></a>
-						<a href="#"><img src="images/pinterest.png" alt="" /></a>
+						<a href="https://www.facebook.com/"><img src="images/fb.png" alt="" /></a>
+						<a href="https://twitter.com/"><img src="images/tw.png" alt="" /></a>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -151,9 +144,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<div class="footer-bottom">
 		<div class="wrap">
-			<div class="copy">
-				<p>All rights Reserved | Design by <a href="http://w3layouts.com">W3Layouts</a></p>
-			</div>
 		</div>
 	</div>
 </body>

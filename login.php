@@ -20,8 +20,8 @@
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary" style="background-color:green;">Đăng nhập</button>
-
                 <p class="login-box-msg" style="padding-top:20px">Bạn chưa có tài khoản?<a href="registration.php">Đăng ký</a></p>
+                <a href="admin/index.php">Admin</a>
               </div>
           </div>
         </div>

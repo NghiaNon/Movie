@@ -3,10 +3,8 @@
 <div class="content">
 	<div class="wrap">
 		<div class="content-top">
-			<h3>Movies</h3>
-			xvc
+			<h3>Danh sách phim</h3>
 		</div>
-
 		<div class="clear"></div>
 
 	</div>
