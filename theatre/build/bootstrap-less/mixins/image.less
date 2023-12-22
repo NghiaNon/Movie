@@ -1,20 +1,17 @@
-// Image Mixins
-// - Responsive image
-// - Retina image
+// Hỗn hợp hình ảnh
+// - Hình ảnh đáp ứng
+// - Hình ảnh võng mạc
 
-// Responsive image
+// Hình ảnh đáp ứng
 //
-// Keep images from scaling beyond the width of their parents.
+// Giữ cho hình ảnh không bị co giãn vượt quá chiều rộng của hình ảnh gốc.
 .img-responsive(@display: block) {
   display: @display;
-  max-width: 100%; // Part 1: Set a maximum relative to the parent
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+  max-width: 100%; 
+  height: auto; 
 }
 
-// Retina image
-//
-// Short retina mixin for setting background-image and -size. Note that the
-// spelling of `min--moz-device-pixel-ratio` is intentional.
+
 .img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
   background-image: url("@{file-1x}");
 

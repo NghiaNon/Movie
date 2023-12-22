@@ -1,52 +1,52 @@
-// Framework grid generation
+// Tạo lưới khung
 //
-// Used only by Bootstrap to generate the correct number of grid classes given
-// any value of `@grid-columns`.
+// Chỉ được Bootstrap sử dụng để tạo đúng số lớp lưới đã cho
+// bất kỳ giá trị nào của `@grid-columns`.
 
 .make-grid-columns() {
-  // Common styles for all sizes of grid columns, widths 1-12
+  
   .col(@index) {
-    // initial
+   
     @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) {
-    // general; "=<" isn't a typo
+    
     @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) {
-    // terminal
+    
     @{list} {
       position: relative;
-      // Prevent columns from collapsing when empty
+      
       min-height: 1px;
-      // Inner gutter via padding
+      
       padding-left: (@grid-gutter-width / 2);
       padding-right: (@grid-gutter-width / 2);
     }
   }
-  .col(1); // kickstart it
+  .col(1); 
 }
 
 .float-grid-columns(@class) {
   .col(@index) {
-    // initial
+    
     @item: ~".col-@{class}-@{index}";
     .col((@index + 1), @item);
   }
   .col(@index, @list) when (@index =< @grid-columns) {
-    // general
+    
     @item: ~".col-@{class}-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
   .col(@index, @list) when (@index > @grid-columns) {
-    // terminal
+    
     @{list} {
       float: left;
     }
   }
-  .col(1); // kickstart it
+  .col(1); 
 }
 
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
@@ -85,14 +85,14 @@
   }
 }
 
-// Basic looping in LESS
+
 .loop-grid-columns(@index, @class, @type) when (@index >= 0) {
   .calc-grid-column(@index, @class, @type);
-  // next iteration
+  
   .loop-grid-columns((@index - 1), @class, @type);
 }
 
-// Create grid for specific class
+
 .make-grid(@class) {
   .float-grid-columns(@class);
   .loop-grid-columns(@grid-columns, @class, width);

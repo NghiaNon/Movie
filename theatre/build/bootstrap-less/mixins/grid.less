@@ -1,8 +1,8 @@
-// Grid system
+// Hệ thống lưới điện
 //
-// Generate semantic grid columns with these mixins.
+// Tạo các cột lưới ngữ nghĩa với các mixin này.
 
-// Centered container element
+// Phần tử chứa ở giữa
 .container-fixed(@gutter: @grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
@@ -11,14 +11,13 @@
   &:extend(.clearfix all);
 }
 
-// Creates a wrapper for a series of columns
+// Tạo một trình bao bọc cho một chuỗi các cột
 .make-row(@gutter: @grid-gutter-width) {
   margin-left: ceil((@gutter / -2));
   margin-right: floor((@gutter / -2));
   &:extend(.clearfix all);
 }
 
-// Generate the extra small columns
 .make-xs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   float: left;
@@ -40,7 +39,7 @@
   right: percentage((@columns / @grid-columns));
 }
 
-// Generate the small columns
+
 .make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -71,7 +70,7 @@
   }
 }
 
-// Generate the medium columns
+
 .make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -102,7 +101,7 @@
   }
 }
 
-// Generate the large columns
+
 .make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;

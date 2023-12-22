@@ -1,7 +1,7 @@
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under the MIT license
+ * Bản quyền 2011-2016 Twitter, Inc.
+ * Được cấp phép theo giấy phép MIT
  */
 
 if (typeof jQuery === 'undefined') {
@@ -16,20 +16,20 @@ if (typeof jQuery === 'undefined') {
   }
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+ * ====================================================== ==========================
+ * Bản quyền 2011-2016 Twitter, Inc.
+ * Được cấp phép theo MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ====================================================== ========================= */
 
 
 +function ($) {
   'use strict';
 
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
-  // ============================================================
+  // HỖ TRỢ CHUYỂN TIẾP CSS (Shoutout: http://www.modernizr.com/)
+  // ==================================================== =============
 
   function transitionEnd() {
     var el = document.createElement('bootstrap')
@@ -76,20 +76,20 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: alert.js v3.3.7
+/* ==================================================== ===========================
+ * Bootstrap: cảnh báo.js v3.3.7
  * http://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+ * ====================================================== ==========================
+ * Bản quyền 2011-2016 Twitter, Inc.
+ * Được cấp phép theo MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ====================================================== ========================= */
 
 
 +function ($) {
   'use strict';
 
-  // ALERT CLASS DEFINITION
-  // ======================
+  // ĐỊNH NGHĨA LỚP CẢNH BÁO
+  // ========================
 
   var dismiss = '[data-dismiss="alert"]'
   var Alert   = function (el) {
@@ -124,7 +124,7 @@ if (typeof jQuery === 'undefined') {
     $parent.removeClass('in')
 
     function removeElement() {
-      // detach from parent, fire event then clean up data
+      // tách khỏi cha mẹ, kích hoạt sự kiện rồi dọn sạch dữ liệu
       $parent.detach().trigger('closed.bs.alert').remove()
     }
 
@@ -136,8 +136,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // ALERT PLUGIN DEFINITION
-  // =======================
+ // ĐỊNH NGHĨA PLUGIN CẢNH BÁO
+  // =========================
 
   function Plugin(option) {
     return this.each(function () {
@@ -154,38 +154,29 @@ if (typeof jQuery === 'undefined') {
   $.fn.alert             = Plugin
   $.fn.alert.Constructor = Alert
 
-
-  // ALERT NO CONFLICT
-  // =================
+// CẢNH BÁO KHÔNG CÓ XUNG ĐỘT
+  // ===================
 
   $.fn.alert.noConflict = function () {
     $.fn.alert = old
     return this
   }
 
-
-  // ALERT DATA-API
-  // ==============
+// ALERT DỮ LIỆU-API
+  // ================
 
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: button.js v3.3.7
- * http://getbootstrap.com/javascript/#buttons
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+
 
 
 +function ($) {
   'use strict';
 
-  // BUTTON PUBLIC CLASS DEFINITION
-  // ==============================
-
+  // ĐỊNH NGHĨA LỚP CÔNG CỘNG NÚT
+  // =================================
   var Button = function (element, options) {
     this.$element  = $(element)
     this.options   = $.extend({}, Button.DEFAULTS, options)
@@ -208,7 +199,7 @@ if (typeof jQuery === 'undefined') {
 
     if (data.resetText == null) $el.data('resetText', $el[val]())
 
-    // push to event loop to allow forms to submit
+    // đẩy tới vòng lặp sự kiện để cho phép gửi biểu mẫu
     setTimeout($.proxy(function () {
       $el[val](data[state] == null ? this.options[state] : data[state])
 
@@ -245,8 +236,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // BUTTON PLUGIN DEFINITION
-  // ========================
+  // ĐỊNH NGHĨA NÚT PLUGIN
+  // ==========================
 
   function Plugin(option) {
     return this.each(function () {
@@ -267,8 +258,8 @@ if (typeof jQuery === 'undefined') {
   $.fn.button.Constructor = Button
 
 
-  // BUTTON NO CONFLICT
-  // ==================
+  // NÚT KHÔNG XUNG ĐỘT
+  // ====================
 
   $.fn.button.noConflict = function () {
     $.fn.button = old
@@ -276,17 +267,17 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // BUTTON DATA-API
-  // ===============
+ // NÚT DỮ LIỆU-API
+  // =================
 
   $(document)
     .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       var $btn = $(e.target).closest('.btn')
       Plugin.call($btn, 'toggle')
       if (!($(e.target).is('input[type="radio"], input[type="checkbox"]'))) {
-        // Prevent double click on radios, and the double selections (so cancellation) on checkboxes
+        // Ngăn chặn nhấp đúp vào radio và các lựa chọn kép (vì vậy hủy bỏ) trên các hộp kiểm
         e.preventDefault()
-        // The target component still receive the focus
+        // Thành phần đích vẫn nhận được focus
         if ($btn.is('input,button')) $btn.trigger('focus')
         else $btn.find('input:visible,button:visible').first().trigger('focus')
       }
@@ -297,20 +288,13 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: carousel.js v3.3.7
- * http://getbootstrap.com/javascript/#carousel
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
 
 
 +function ($) {
   'use strict';
 
-  // CAROUSEL CLASS DEFINITION
-  // =========================
+  // ĐỊNH NGHĨA LỚP CAROUSEL
+  // ===========================
 
   var Carousel = function (element, options) {
     this.$element    = $(element)
@@ -443,7 +427,7 @@ if (typeof jQuery === 'undefined') {
     var slidEvent = $.Event('slid.bs.carousel', { relatedTarget: relatedTarget, direction: direction }) // yes, "slid"
     if ($.support.transition && this.$element.hasClass('slide')) {
       $next.addClass(type)
-      $next[0].offsetWidth // force reflow
+      $next[0].offsetWidth // buộc chỉnh lại dòng
       $active.addClass(direction)
       $next.addClass(direction)
       $active
@@ -469,8 +453,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // CAROUSEL PLUGIN DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA PLUGIN CAROUSEL
+  // ============================
 
   function Plugin(option) {
     return this.each(function () {
@@ -492,18 +476,16 @@ if (typeof jQuery === 'undefined') {
   $.fn.carousel.Constructor = Carousel
 
 
-  // CAROUSEL NO CONFLICT
-  // ====================
-
+  // CAROUSEL KHÔNG CÓ XUNG ĐỘT
+  // ======================
   $.fn.carousel.noConflict = function () {
     $.fn.carousel = old
     return this
   }
 
 
-  // CAROUSEL DATA-API
-  // =================
-
+  // CAROUSEL KHÔNG CÓ XUNG ĐỘT
+  // ======================
   var clickHandler = function (e) {
     var href
     var $this   = $(this)
@@ -535,21 +517,14 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
 
-/* jshint latedef: false */
+
 
 +function ($) {
   'use strict';
 
-  // COLLAPSE PUBLIC CLASS DEFINITION
-  // ================================
+ // THU GẬP ĐỊNH NGHĨA LỚP CÔNG CỘNG
+  // ===================================
 
   var Collapse = function (element, options) {
     this.$element      = $(element)
@@ -701,8 +676,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // COLLAPSE PLUGIN DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA PLUGIN THU GỠ
+  // ============================
 
   function Plugin(option) {
     return this.each(function () {
@@ -722,8 +697,8 @@ if (typeof jQuery === 'undefined') {
   $.fn.collapse.Constructor = Collapse
 
 
-  // COLLAPSE NO CONFLICT
-  // ====================
+ // THU GẬP KHÔNG XUNG ĐỘT
+  // ======================
 
   $.fn.collapse.noConflict = function () {
     $.fn.collapse = old
@@ -731,8 +706,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // COLLAPSE DATA-API
-  // =================
+  // THU GỌN DỮ LIỆU-API
+  // ===================
 
   $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
     var $this   = $(this)
@@ -747,14 +722,6 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
-
-/* ========================================================================
- * Bootstrap: dropdown.js v3.3.7
- * http://getbootstrap.com/javascript/#dropdowns
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
 
 
 +function ($) {
@@ -817,7 +784,7 @@ if (typeof jQuery === 'undefined') {
 
     if (!isActive) {
       if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
-        // if mobile we use a backdrop because click events don't delegate
+       // nếu là thiết bị di động, chúng tôi sử dụng phông nền vì các sự kiện nhấp chuột không được ủy quyền
         $(document.createElement('div'))
           .addClass('dropdown-backdrop')
           .insertAfter($(this))
@@ -866,16 +833,15 @@ if (typeof jQuery === 'undefined') {
 
     var index = $items.index(e.target)
 
-    if (e.which == 38 && index > 0)                 index--         // up
-    if (e.which == 40 && index < $items.length - 1) index++         // down
+    if (e.which == 38 && index > 0)                 index--         // lên
+    if (e.which == 40 && index < $items.length - 1) index++         // xuống
     if (!~index)                                    index = 0
 
     $items.eq(index).trigger('focus')
   }
 
-
-  // DROPDOWN PLUGIN DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA PLUGIN DROPDOWN
+  // ============================
 
   function Plugin(option) {
     return this.each(function () {
@@ -892,9 +858,8 @@ if (typeof jQuery === 'undefined') {
   $.fn.dropdown             = Plugin
   $.fn.dropdown.Constructor = Dropdown
 
-
-  // DROPDOWN NO CONFLICT
-  // ====================
+  // THẢ XUỐNG KHÔNG CÓ XUNG ĐỘT
+  // ======================
 
   $.fn.dropdown.noConflict = function () {
     $.fn.dropdown = old
@@ -902,8 +867,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // APPLY TO STANDARD DROPDOWN ELEMENTS
-  // ===================================
+  // ÁP DỤNG CHO CÁC YẾU TỐ THẢ XUỐNG TIÊU CHUẨN
+  // ======================================
 
   $(document)
     .on('click.bs.dropdown.data-api', clearMenus)
@@ -914,20 +879,14 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: modal.js v3.3.7
- * http://getbootstrap.com/javascript/#modals
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+
 
 
 +function ($) {
   'use strict';
 
-  // MODAL CLASS DEFINITION
-  // ======================
+  // ĐỊNH NGHĨA LỚP PHƯƠNG THỨC
+  // ========================
 
   var Modal = function (element, options) {
     this.options             = options
@@ -993,7 +952,7 @@ if (typeof jQuery === 'undefined') {
       var transition = $.support.transition && that.$element.hasClass('fade')
 
       if (!that.$element.parent().length) {
-        that.$element.appendTo(that.$body) // don't move modals dom position
+        that.$element.appendTo(that.$body) // không di chuyển vị trí dom của phương thức
       }
 
       that.$element
@@ -1003,7 +962,7 @@ if (typeof jQuery === 'undefined') {
       that.adjustDialog()
 
       if (transition) {
-        that.$element[0].offsetWidth // force reflow
+        that.$element[0].offsetWidth // buộc chỉnh lại dòng
       }
 
       that.$element.addClass('in')
@@ -1013,7 +972,7 @@ if (typeof jQuery === 'undefined') {
       var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
 
       transition ?
-        that.$dialog // wait for modal to slide in
+        that.$dialog // đợi modal trượt vào
           .one('bsTransitionEnd', function () {
             that.$element.trigger('focus').trigger(e)
           })
@@ -1054,7 +1013,7 @@ if (typeof jQuery === 'undefined') {
 
   Modal.prototype.enforceFocus = function () {
     $(document)
-      .off('focusin.bs.modal') // guard against infinite focus loop
+      .off('focusin.bs.modal') // bảo vệ chống lại vòng lặp tiêu điểm vô hạn
       .on('focusin.bs.modal', $.proxy(function (e) {
         if (document !== e.target &&
             this.$element[0] !== e.target &&
@@ -1120,8 +1079,7 @@ if (typeof jQuery === 'undefined') {
           : this.hide()
       }, this))
 
-      if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
-
+      if (doAnimate) this.$backdrop[0].offsetWidth // buộc chỉnh lại dòng
       this.$backdrop.addClass('in')
 
       if (!callback) return
@@ -1150,7 +1108,7 @@ if (typeof jQuery === 'undefined') {
     }
   }
 
-  // these following methods are used to handle overflowing modals
+ // các phương thức sau đây được sử dụng để xử lý các phương thức tràn
 
   Modal.prototype.handleUpdate = function () {
     this.adjustDialog()
@@ -1174,7 +1132,7 @@ if (typeof jQuery === 'undefined') {
 
   Modal.prototype.checkScrollbar = function () {
     var fullWindowWidth = window.innerWidth
-    if (!fullWindowWidth) { // workaround for missing window.innerWidth in IE8
+    if (!fullWindowWidth) { // cách giải quyết thiếu window.innerWidth trong IE8
       var documentElementRect = document.documentElement.getBoundingClientRect()
       fullWindowWidth = documentElementRect.right - Math.abs(documentElementRect.left)
     }
@@ -1192,7 +1150,7 @@ if (typeof jQuery === 'undefined') {
     this.$body.css('padding-right', this.originalBodyPad)
   }
 
-  Modal.prototype.measureScrollbar = function () { // thx walsh
+  Modal.prototype.measureScrollbar = function () { // cảm ơn Walsh
     var scrollDiv = document.createElement('div')
     scrollDiv.className = 'modal-scrollbar-measure'
     this.$body.append(scrollDiv)
@@ -1202,8 +1160,8 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // MODAL PLUGIN DEFINITION
-  // =======================
+  // ĐỊNH NGHĨA PLUGIN PHƯƠNG THỨC
+  // =========================
 
   function Plugin(option, _relatedTarget) {
     return this.each(function () {
@@ -1223,8 +1181,8 @@ if (typeof jQuery === 'undefined') {
   $.fn.modal.Constructor = Modal
 
 
-  // MODAL NO CONFLICT
-  // =================
+  // PHƯƠNG THỨC KHÔNG XUNG ĐỘT
+  // ===================
 
   $.fn.modal.noConflict = function () {
     $.fn.modal = old
@@ -1232,19 +1190,19 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // MODAL DATA-API
-  // ==============
+  // API DỮ LIỆU PHƯƠNG THỨC
+  // ================
 
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // dải cho ie7
     var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()
 
     $target.one('show.bs.modal', function (showEvent) {
-      if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
+      if (showEvent.isDefaultPrevented()) return // chỉ đăng ký focus recovery nếu modal thực sự được hiển thị
       $target.one('hidden.bs.modal', function () {
         $this.is(':visible') && $this.trigger('focus')
       })
@@ -1254,21 +1212,13 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: tooltip.js v3.3.7
- * http://getbootstrap.com/javascript/#tooltip
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
 
 
 +function ($) {
   'use strict';
 
-  // TOOLTIP PUBLIC CLASS DEFINITION
-  // ===============================
+  // ĐỊNH NGHĨA LỚP CÔNG CỤ TOOLTIP
+  // ==================================
 
   var Tooltip = function (element, options) {
     this.type       = null
@@ -1507,19 +1457,18 @@ if (typeof jQuery === 'undefined') {
     var width  = $tip[0].offsetWidth
     var height = $tip[0].offsetHeight
 
-    // manually read margins because getBoundingClientRect includes difference
+    // đọc lề theo cách thủ công vì getBoundingClientRect bao gồm sự khác biệt
     var marginTop = parseInt($tip.css('margin-top'), 10)
     var marginLeft = parseInt($tip.css('margin-left'), 10)
 
-    // we must check for NaN for ie 8/9
+   // chúng ta phải kiểm tra NaN tức là 8/9
     if (isNaN(marginTop))  marginTop  = 0
     if (isNaN(marginLeft)) marginLeft = 0
 
     offset.top  += marginTop
     offset.left += marginLeft
 
-    // $.fn.offset doesn't round pixel values
-    // so we use setOffset directly with our own function B-0
+    
     $.offset.setOffset($tip[0], $.extend({
       using: function (props) {
         $tip.css({
@@ -1531,7 +1480,7 @@ if (typeof jQuery === 'undefined') {
 
     $tip.addClass('in')
 
-    // check to see if placing tip in new offset caused the tip to resize itself
+    
     var actualWidth  = $tip[0].offsetWidth
     var actualHeight = $tip[0].offsetHeight
 
@@ -1573,7 +1522,7 @@ if (typeof jQuery === 'undefined') {
 
     function complete() {
       if (that.hoverState != 'in') $tip.detach()
-      if (that.$element) { // TODO: Check whether guarding this code with this `if` is really necessary.
+      if (that.$element) { 
         that.$element
           .removeAttr('aria-describedby')
           .trigger('hidden.bs.' + that.type)
@@ -1617,12 +1566,10 @@ if (typeof jQuery === 'undefined') {
 
     var elRect    = el.getBoundingClientRect()
     if (elRect.width == null) {
-      // width and height are missing in IE8, so compute them manually; see https://github.com/twbs/bootstrap/issues/14093
+     
       elRect = $.extend({}, elRect, { width: elRect.right - elRect.left, height: elRect.bottom - elRect.top })
     }
     var isSvg = window.SVGElement && el instanceof window.SVGElement
-    // Avoid using $.offset() on SVGs since it gives incorrect results in jQuery 3.
-    // See https://github.com/twbs/bootstrap/issues/20280
     var elOffset  = isBody ? { top: 0, left: 0 } : (isSvg ? null : $element.offset())
     var scroll    = { scroll: isBody ? document.documentElement.scrollTop || document.body.scrollTop : $element.scrollTop() }
     var outerDims = isBody ? { width: $(window).width(), height: $(window).height() } : null
@@ -1648,17 +1595,17 @@ if (typeof jQuery === 'undefined') {
     if (/right|left/.test(placement)) {
       var topEdgeOffset    = pos.top - viewportPadding - viewportDimensions.scroll
       var bottomEdgeOffset = pos.top + viewportPadding - viewportDimensions.scroll + actualHeight
-      if (topEdgeOffset < viewportDimensions.top) { // top overflow
+      if (topEdgeOffset < viewportDimensions.top) { 
         delta.top = viewportDimensions.top - topEdgeOffset
-      } else if (bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height) { // bottom overflow
+      } else if (bottomEdgeOffset > viewportDimensions.top + viewportDimensions.height) { 
         delta.top = viewportDimensions.top + viewportDimensions.height - bottomEdgeOffset
       }
     } else {
       var leftEdgeOffset  = pos.left - viewportPadding
       var rightEdgeOffset = pos.left + viewportPadding + actualWidth
-      if (leftEdgeOffset < viewportDimensions.left) { // left overflow
+      if (leftEdgeOffset < viewportDimensions.left) { 
         delta.left = viewportDimensions.left - leftEdgeOffset
-      } else if (rightEdgeOffset > viewportDimensions.right) { // right overflow
+      } else if (rightEdgeOffset > viewportDimensions.right) { 
         delta.left = viewportDimensions.left + viewportDimensions.width - rightEdgeOffset
       }
     }
@@ -1744,8 +1691,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // TOOLTIP PLUGIN DEFINITION
-  // =========================
+  
 
   function Plugin(option) {
     return this.each(function () {
@@ -1765,8 +1711,6 @@ if (typeof jQuery === 'undefined') {
   $.fn.tooltip.Constructor = Tooltip
 
 
-  // TOOLTIP NO CONFLICT
-  // ===================
 
   $.fn.tooltip.noConflict = function () {
     $.fn.tooltip = old
@@ -1775,20 +1719,13 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: popover.js v3.3.7
- * http://getbootstrap.com/javascript/#popovers
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+
 
 
 +function ($) {
   'use strict';
 
-  // POPOVER PUBLIC CLASS DEFINITION
-  // ===============================
+ 
 
   var Popover = function (element, options) {
     this.init('popover', element, options)
@@ -1806,8 +1743,7 @@ if (typeof jQuery === 'undefined') {
   })
 
 
-  // NOTE: POPOVER EXTENDS tooltip.js
-  // ================================
+  
 
   Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype)
 
@@ -1823,14 +1759,13 @@ if (typeof jQuery === 'undefined') {
     var content = this.getContent()
 
     $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
-    $tip.find('.popover-content').children().detach().end()[ // we use append for html objects to maintain js events
+    $tip.find('.popover-content').children().detach().end()[ 
       this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
     ](content)
 
     $tip.removeClass('fade top bottom left right in')
 
-    // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
-    // this manually by checking the contents.
+   
     if (!$tip.find('.popover-title').html()) $tip.find('.popover-title').hide()
   }
 
@@ -1853,8 +1788,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // POPOVER PLUGIN DEFINITION
-  // =========================
+  
 
   function Plugin(option) {
     return this.each(function () {
@@ -1874,8 +1808,7 @@ if (typeof jQuery === 'undefined') {
   $.fn.popover.Constructor = Popover
 
 
-  // POPOVER NO CONFLICT
-  // ===================
+ 
 
   $.fn.popover.noConflict = function () {
     $.fn.popover = old
@@ -1884,20 +1817,13 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: scrollspy.js v3.3.7
- * http://getbootstrap.com/javascript/#scrollspy
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+
 
 
 +function ($) {
   'use strict';
 
-  // SCROLLSPY CLASS DEFINITION
-  // ==========================
+ 
 
   function ScrollSpy(element, options) {
     this.$body          = $(document.body)
@@ -2016,8 +1942,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // SCROLLSPY PLUGIN DEFINITION
-  // ===========================
+ 
 
   function Plugin(option) {
     return this.each(function () {
@@ -2036,8 +1961,7 @@ if (typeof jQuery === 'undefined') {
   $.fn.scrollspy.Constructor = ScrollSpy
 
 
-  // SCROLLSPY NO CONFLICT
-  // =====================
+
 
   $.fn.scrollspy.noConflict = function () {
     $.fn.scrollspy = old
@@ -2045,8 +1969,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // SCROLLSPY DATA-API
-  // ==================
+
 
   $(window).on('load.bs.scrollspy.data-api', function () {
     $('[data-spy="scroll"]').each(function () {
@@ -2057,25 +1980,15 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: tab.js v3.3.7
- * http://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+
 
 
 +function ($) {
   'use strict';
 
-  // TAB CLASS DEFINITION
-  // ====================
 
   var Tab = function (element) {
-    // jscs:disable requireDollarBeforejQueryAssignment
     this.element = $(element)
-    // jscs:enable requireDollarBeforejQueryAssignment
   }
 
   Tab.VERSION = '3.3.7'
@@ -2089,7 +2002,7 @@ if (typeof jQuery === 'undefined') {
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') 
     }
 
     if ($this.parent('li').hasClass('active')) return
@@ -2143,7 +2056,7 @@ if (typeof jQuery === 'undefined') {
           .attr('aria-expanded', true)
 
       if (transition) {
-        element[0].offsetWidth // reflow for transition
+        element[0].offsetWidth 
         element.addClass('in')
       } else {
         element.removeClass('fade')
@@ -2171,8 +2084,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // TAB PLUGIN DEFINITION
-  // =====================
+  
 
   function Plugin(option) {
     return this.each(function () {
@@ -2190,8 +2102,7 @@ if (typeof jQuery === 'undefined') {
   $.fn.tab.Constructor = Tab
 
 
-  // TAB NO CONFLICT
-  // ===============
+ 
 
   $.fn.tab.noConflict = function () {
     $.fn.tab = old
@@ -2199,8 +2110,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // TAB DATA-API
-  // ============
+  
 
   var clickHandler = function (e) {
     e.preventDefault()
@@ -2213,20 +2123,13 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: affix.js v3.3.7
- * http://getbootstrap.com/javascript/#affix
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+
 
 
 +function ($) {
   'use strict';
 
-  // AFFIX CLASS DEFINITION
-  // ======================
+  
 
   var Affix = function (element, options) {
     this.options = $.extend({}, Affix.DEFAULTS, options)
@@ -2328,8 +2231,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // AFFIX PLUGIN DEFINITION
-  // =======================
+ 
 
   function Plugin(option) {
     return this.each(function () {
@@ -2348,8 +2250,7 @@ if (typeof jQuery === 'undefined') {
   $.fn.affix.Constructor = Affix
 
 
-  // AFFIX NO CONFLICT
-  // =================
+ 
 
   $.fn.affix.noConflict = function () {
     $.fn.affix = old
@@ -2357,8 +2258,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  // AFFIX DATA-API
-  // ==============
+  
 
   $(window).on('load', function () {
     $('[data-spy="affix"]').each(function () {

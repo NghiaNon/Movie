@@ -1,8 +1,8 @@
-// Tables
+// Bảng
 
 .table-row-variant(@state; @background) {
-  // Exact selectors below required to override `.table-striped` and prevent
-  // inheritance to nested tables.
+  // Cần có các bộ chọn chính xác bên dưới để ghi đè `.table-striped` và ngăn chặn
+  // kế thừa các bảng lồng nhau.
   .table > thead > tr,
   .table > tbody > tr,
   .table > tfoot > tr {
@@ -14,8 +14,8 @@
     }
   }
 
-  // Hover states for `.table-hover`
-  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  // Trạng thái di chuột cho `.table-hover`
+  // Lưu ý: tính năng này không có sẵn cho các ô hoặc hàng trong `thead` hoặc `tfoot`.
   .table-hover > tbody > tr {
     > td.@{state}:hover,
     > th.@{state}:hover,
