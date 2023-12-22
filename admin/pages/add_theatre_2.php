@@ -125,7 +125,7 @@ include('header.php');
               <img src="ajax-loader.gif">
             </div>
 
-            <!-- content will be load here -->
+            <!-- nội dung sẽ được tải ở đây -->
             <div id="dynamic-content"></div>
 
           </div>
@@ -197,14 +197,14 @@ include('footer.php');
         $('#screendtls').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
       });
   }
-  $(document).ready(function() { // load dynamic bootstrap model
+  $(document).ready(function() { // tải mô hình bootstrap động
 
     $(document).on('click', '#getUser', function(e) {
 
       e.preventDefault();
 
-      $('#dynamic-content').html(''); // leave it blank before ajax call
-      $('#modal-loader').show(); // load ajax loader
+      $('#dynamic-content').html(''); // để trống trước cuộc gọi ajax
+      $('#modal-loader').show(); // tải trình tải ajax
 
       $.ajax({
           url: 'add_screen_form.php',
@@ -215,8 +215,8 @@ include('footer.php');
         .done(function(data) {
           console.log(data);
           $('#dynamic-content').html('');
-          $('#dynamic-content').html(data); // load response 
-          $('#modal-loader').hide(); // hide ajax loader	
+          $('#dynamic-content').html(data); // phản ứng tải
+          $('#modal-loader').hide(); // ẩn trình tải ajax
         })
         .fail(function() {
           $('#dynamic-content').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');

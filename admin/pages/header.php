@@ -94,7 +94,7 @@ include('../../config.php');
       </nav>
     </header>
 
-    <!-- Left side column. contains the sidebar -->
+    <!-- Cột bên trái. chứa thanh bên-->
     <aside class="main-sidebar">
       <!-- sidebar: style can be found in sidebar.less -->
       <section class="sidebar">
