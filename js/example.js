@@ -8,10 +8,10 @@ $(function() {
         EXAMPLE ONE
     */
     
-    /* Add Magic Line markup via JavaScript, because it ain't gonna work without */
+    /* Thêm đánh dấu Magic Line thông qua JavaScript, vì nó sẽ không hoạt động nếu không có */
     $("#example-one").append("<li id='magic-line'></li>");
     
-    /* Cache it */
+    /* Lưu cache */
     var $magicLine = $("#magic-line");
     
     $magicLine
@@ -72,7 +72,7 @@ $(function() {
         });    
     });
     
-    /* Kick IE into gear */
+    /* Kích hoạt IE */
     $(".current_page_item_two a").mouseenter();
     
 });

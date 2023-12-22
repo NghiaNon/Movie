@@ -10,7 +10,7 @@ var autoComplete = (function(){
     function autoComplete(options){
         if (!document.querySelector) return;
 
-        // helpers
+        // các hàm hỗ trợ
         function hasClass(el, className){ return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className); }
 
         function addEvent(el, type, handler){
@@ -38,7 +38,7 @@ var autoComplete = (function(){
             cache: 1,
             menuClass: '',
             renderItem: function (item, search){
-                // escape special characters
+                // tránh các ký tự đặc biệt
                 search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
                 var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
                 return '<div class="autocomplete-suggestion" data-val="' + item + '">' + item.replace(re, "<b>$1</b>") + '</div>';
@@ -47,12 +47,12 @@ var autoComplete = (function(){
         };
         for (var k in options) { if (options.hasOwnProperty(k)) o[k] = options[k]; }
 
-        // init
+        // khởi tạo
         var elems = typeof o.selector == 'object' ? [o.selector] : document.querySelectorAll(o.selector);
         for (var i=0; i<elems.length; i++) {
             var that = elems[i];
 
-            // create suggestions container "sc"
+             // tạo container cho gợi ý "sc"
             that.sc = document.createElement('div');
             that.sc.className = 'autocomplete-suggestions '+o.menuClass;
 
@@ -96,7 +96,7 @@ var autoComplete = (function(){
             }, that.sc);
 
             live('autocomplete-suggestion', 'mousedown', function(e){
-                if (hasClass(this, 'autocomplete-suggestion')) { // else outside click
+                if (hasClass(this, 'autocomplete-suggestion')) { // nếu không phải là click bên ngoài
                     var v = this.getAttribute('data-val');
                     that.value = v;
                     o.onSelect(e, v, this);
@@ -109,7 +109,7 @@ var autoComplete = (function(){
                 if (!over_sb) {
                     that.last_val = that.value;
                     that.sc.style.display = 'none';
-                    setTimeout(function(){ that.sc.style.display = 'none'; }, 350); // hide suggestions on fast input
+                    setTimeout(function(){ that.sc.style.display = 'none'; }, 350); // ẩn gợi ý khi nhập nhanh
                 } else if (that !== document.activeElement) setTimeout(function(){ that.focus(); }, 20);
             };
             addEvent(that, 'blur', that.blurHandler);
@@ -168,7 +168,7 @@ var autoComplete = (function(){
                             clearTimeout(that.timer);
                             if (o.cache) {
                                 if (val in that.cache) { suggest(that.cache[val]); return; }
-                                // no requests if previous suggestions were empty
+                                // không gửi yêu cầu nếu các gợi ý trước đó trống
                                 for (var i=1; i<val.length-o.minChars; i++) {
                                     var part = val.slice(0, val.length-i);
                                     if (part in that.cache && !that.cache[part].length) { suggest([]); return; }
@@ -191,7 +191,7 @@ var autoComplete = (function(){
             if (!o.minChars) addEvent(that, 'focus', that.focusHandler);
         }
 
-        // public destroy method
+        // phương thức hủy công khai
         this.destroy = function(){
             for (var i=0; i<elems.length; i++) {
                 var that = elems[i];
