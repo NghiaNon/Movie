@@ -1,5 +1,5 @@
 /*
- * Component: Box
+ * Component: hộp
  * --------------
  */
 .box {
@@ -11,7 +11,7 @@
   width: 100%;
   box-shadow: @box-boxshadow;
 
-  // Box color variations
+ 
   &.box-primary {
     border-top-color: @light-blue;
   }
@@ -31,7 +31,7 @@
     border-top-color: @gray-lte;
   }
 
-  // collapsed mode
+  
   &.collapsed-box {
     .box-body,
     .box-footer {
@@ -49,7 +49,7 @@
     }
   }
 
-  // fixed height to 300px
+  
   &.height-control {
     .box-body {
       max-height: 300px;
@@ -64,9 +64,9 @@
     border-left: 1px solid @box-border-color;
   }
 
-  //SOLID BOX
-  //---------
-  //use this class to get a colored header and borders
+  //
+  //--------
+  // sử dụng lớp này để lấy tiêu đề và đường viền màu
 
   &.box-solid {
     border-top: 0;
@@ -82,7 +82,7 @@
       }
     }
 
-    // Box color variations
+   
     &.box-default {
       .box-solid-variant(@gray-lte, #444);
     }
@@ -107,7 +107,7 @@
       box-shadow: none;
     }
 
-    // Fix font color for tiles
+    /
     &[class*='bg'] {
       > .box-header {
         color: #fff;
@@ -116,14 +116,14 @@
 
   }
 
-  //BOX GROUP
+  //
   .box-group {
     > .box {
       margin-bottom: 5px;
     }
   }
 
-  // jQuery Knob in a box
+  // 
   .knob-label {
     text-align: center;
     color: #333;
@@ -135,7 +135,7 @@
 
 .box,
 .overlay-wrapper {
-  // Box overlay for LOADING STATE effect
+  // 
   > .overlay,
   > .loading-img {
     position: absolute;
@@ -165,21 +165,21 @@
   }
 }
 
-//Add clearfix to header, body and footer
+//
 .box-header,
 .box-body,
 .box-footer {
   .clearfix();
 }
 
-//Box header
+//
 .box-header {
   color: #444;
   display: block;
   padding: @box-padding;
   position: relative;
 
-  //Add bottom border
+  
   &.with-border {
     border-bottom: 1px solid @box-border-color;
     .collapsed-box & {
@@ -187,7 +187,7 @@
     }
   }
 
-  //Icons and box title
+  
   > .fa,
   > .glyphicon,
   > .ion,
@@ -223,7 +223,7 @@
   }
 }
 
-//Box Tools Buttons
+
 .btn-box-tool {
   padding: 5px;
   font-size: 12px;
@@ -238,19 +238,19 @@
   }
 }
 
-//Box Body
+
 .box-body {
   .border-radius(0; 0; @box-border-radius; @box-border-radius);
   padding: @box-padding;
   .no-header & {
     .border-top-radius(@box-border-radius);
   }
-  // Tables within the box body
+  
   > .table {
     margin-bottom: 0;
   }
 
-  // Calendar within the box body
+  
   .fc {
     margin-top: 5px;
   }
@@ -270,7 +270,7 @@
   }
 }
 
-//Box footer
+
 .box-footer {
   .border-radius(0; 0; @box-border-radius; @box-border-radius);
   border-top: 1px solid @box-border-color;
@@ -289,7 +289,7 @@
   }
 }
 
-//Comment Box
+
 .box-comments {
   background: #f7f7f7;
   .box-comment {
@@ -322,17 +322,17 @@
   }
 }
 
-//Widgets
-//-----------
+// Tiện ích
+//----------
 
-/* Widget: TODO LIST */
+/* Tiện ích: DANH SÁCH VIỆC CẦN LÀM */
 
 .todo-list {
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: auto;
-  // Todo list element
+  
   > li {
     .border-radius(2px);
     padding: 10px;
@@ -354,18 +354,18 @@
       font-weight: 600;
     }
 
-    // Time labels
+    
     .label {
       margin-left: 10px;
       font-size: 9px;
     }
 
-    // Tools and options box
+    
     .tools {
       display: none;
       float: right;
       color: @red;
-      // icons
+     
       > .fa, > .glyphicon, > .ion {
         margin-right: 5px;
         cursor: pointer;
@@ -389,7 +389,7 @@
     }
   }
 
-  // Color varaity
+  
   .danger {
     border-left-color: @red;
   }
@@ -414,16 +414,14 @@
 
 }
 
-// END TODO WIDGET
 
-/* Chat widget (DEPRECATED - this will be removed in the next major release. Use Direct Chat instead)*/
 .chat {
   padding: 5px 20px 5px 10px;
 
   .item {
     .clearfix();
     margin-bottom: 10px;
-    // The image
+    
     > img {
       width: 40px;
       height: 40px;
@@ -438,7 +436,7 @@
       border: 2px solid @red;
     }
 
-    // The message body
+    
     > .message {
       margin-left: 55px;
       margin-top: -40px;
@@ -448,7 +446,7 @@
       }
     }
 
-    // The attachment
+    
     > .attachment {
       .border-radius(@attachment-border-radius);
       background: #f4f4f4;
@@ -473,15 +471,15 @@
 
 }
 
-//END CHAT WIDGET
+// KẾT THÚC TIỆN ÍCH TRÒ CHUYỆN
 
-//Input in box
+//Nhập vào ô
 .box-input {
   max-width: 200px;
 }
 
-//A fix for panels body text color when placed within
-// a modal
+
+
 .modal {
   .panel-body {
     color: #444;

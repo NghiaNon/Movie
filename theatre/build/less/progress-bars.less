@@ -1,9 +1,9 @@
 /*
- * Component: Progress Bar
- * -----------------------
+ * Thành phần: Thanh tiến trình
+ * --------------
  */
 
-//General CSS
+// CSS chung
 .progress,
 .progress > .progress-bar {
   .box-shadow(none);
@@ -12,7 +12,7 @@
   }
 }
 
-/* size variation */
+/*kích thước thay đổi */
 .progress.sm,
 .progress-sm {
   height: 10px;
@@ -37,7 +37,7 @@
   }
 }
 
-/* Vertical bars */
+/*Thanh dọc */
 .progress.vertical {
   position: relative;
   width: 30px;
@@ -50,7 +50,7 @@
     bottom: 0;
   }
 
-  //Sizes
+// Kích thước
   &.sm,
   &.progress-sm {
     width: 20px;
@@ -66,7 +66,7 @@
   }
 }
 
-//Progress Groups
+// Nhóm tiến bộ
 .progress-group {
   .progress-text {
     font-weight: 600;
@@ -76,14 +76,14 @@
   }
 }
 
-/* Remove margins from progress bars when put in a table */
+/* Loại bỏ lề khỏi thanh tiến trình khi đặt vào bảng */
 .table {
   tr > td .progress {
     margin: 0;
   }
 }
 
-// Variations
+// Các biến thể
 // -------------------------
 .progress-bar-light-blue,
 .progress-bar-primary {

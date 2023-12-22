@@ -1,10 +1,10 @@
-//AdminLTE mixins
-//===============
+// Hỗn hợp AdminLTE
+//=================
 
-//Changes the color and the hovering properties of the navbar
+// Thay đổi màu sắc và thuộc tính di chuột của thanh điều hướng
 .navbar-variant(@color; @font-color: rgba(255, 255, 255, 0.8); @hover-color: #f6f6f6; @hover-bg: rgba(0, 0, 0, 0.1)) {
   background-color: @color;
-  //Navbar links
+  //Liên kết thanh điều hướng
   .nav > li > a {
     color: @font-color;
   }
@@ -20,7 +20,7 @@
     color: @hover-color;
   }
 
-  //Add color to the sidebar toggle button
+ // Thêm màu vào nút chuyển đổi thanh bên
   .sidebar-toggle {
     color: @font-color;
     &:hover {
@@ -30,7 +30,7 @@
   }
 }
 
-//Logo color variation
+//Biến đổi màu sắc logo
 .logo-variant(@bg-color; @color: #fff; @border-bottom-color: transparent; @border-bottom-width: 0) {
   background-color: @bg-color;
   color: @color;
@@ -41,7 +41,7 @@
   }
 }
 
-//Box solid color variantion creator
+
 .box-solid-variant(@color; @text-color: #fff) {
   border: 1px solid @color;
   > .box-header {
@@ -55,7 +55,7 @@
   }
 }
 
-//Direct Chat Variant
+
 .direct-chat-variant(@bg-color; @color: #fff) {
   .right > .direct-chat-text {
     background: @bg-color;
@@ -68,12 +68,12 @@
   }
 }
 
-//border radius creator
+
 .border-radius(@radius) {
   border-radius: @radius;
 }
 
-//Different radius each side
+
 .border-radius(@top-left;
 @top-right
 ;
@@ -92,7 +92,7 @@
 ;
 }
 
-//Gradient background
+
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
   background: @color;
   background: -webkit-gradient(linear,
@@ -111,54 +111,54 @@
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 }
 
-//Added 2.1.0
-//Skins Mixins
+// Đã thêm 2.1.0
+// Skin Mixins
 
-//Dark Sidebar Mixin
+// Hỗn hợp thanh bên tối
 .skin-dark-sidebar(@link-hover-border-color) {
-  // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
+ 
   .wrapper,
   .main-sidebar,
   .left-side {
     background-color: @sidebar-dark-bg;
   }
-  //User Panel (resides in the sidebar)
+  
   .user-panel {
     > .info, > .info > a {
       color: #fff;
     }
   }
-  //Sidebar Menu. First level links
+  
   .sidebar-menu > li {
-    //Section Headning
+    
     &.header {
       color: lighten(@sidebar-dark-bg, 20%);
       background: darken(@sidebar-dark-bg, 4%);
     }
-    //links
+    
     > a {
       border-left: 3px solid transparent;
     }
-    //Hover and active states
+    
     &:hover > a, &.active > a {
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
       border-left-color: @link-hover-border-color;
     }
-    //First Level Submenu
+    
     > .treeview-menu {
       margin: 0 1px;
       background: @sidebar-dark-submenu-bg;
     }
   }
-  //All links within the sidebar menu
+  
   .sidebar a {
     color: @sidebar-dark-color;
     &:hover {
       text-decoration: none;
     }
   }
-  //All submenus
+  
   .treeview-menu {
     > li {
       > a {
@@ -169,7 +169,7 @@
       }
     }
   }
-  //The sidebar search form
+
   .sidebar-form {
     .border-radius(3px);
     border: 1px solid lighten(@sidebar-dark-bg, 10%);
@@ -179,7 +179,7 @@
       background-color: lighten(@sidebar-dark-bg, 10%);
       border: 1px solid transparent;
       height: 35px;
-      //.transition(all @transition-speed @transition-fn);
+      
     }
     input[type="text"] {
       color: #666;
@@ -201,9 +201,9 @@
   }
 }
 
-//Light Sidebar Mixin
+
 .skin-light-sidebar(@icon-active-color) {
-  // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
+  
   .wrapper,
   .main-sidebar,
   .left-side {
@@ -213,27 +213,26 @@
   .main-footer {
     border-left: 1px solid @gray-lte;
   }
-  //User Panel (resides in the sidebar)
+  
   .user-panel {
     > .info, > .info > a {
       color: @sidebar-light-color;
     }
   }
-  //Sidebar Menu. First level links
+  
   .sidebar-menu > li {
     .transition(border-left-color .3s ease);
-    //border-left: 3px solid transparent;
-    //Section Headning
+    
     &.header {
       color: lighten(@sidebar-light-color, 25%);
       background: @sidebar-light-bg;
     }
-    //links
+    
     > a {
       border-left: 3px solid transparent;
       font-weight: 600;
     }
-    //Hover and active states
+    
     &:hover > a,
     &.active > a {
       color: @sidebar-light-hover-color;
@@ -248,19 +247,19 @@
         font-weight: 600;
       }
     }
-    //First Level Submenu
+    
     > .treeview-menu {
       background: @sidebar-light-submenu-bg;
     }
   }
-  //All links within the sidebar menu
+  
   .sidebar a {
     color: @sidebar-light-color;
     &:hover {
       text-decoration: none;
     }
   }
-  //All submenus
+ 
   .treeview-menu {
     > li {
       > a {
@@ -275,18 +274,18 @@
       }
     }
   }
-  //The sidebar search form
+ 
   .sidebar-form {
     .border-radius(3px);
-    border: 1px solid @gray-lte;  //darken(@sidebar-light-bg, 5%);
+    border: 1px solid @gray-lte;  
     margin: 10px 10px;
     input[type="text"],
     .btn {
       box-shadow: none;
-      background-color: #fff; //darken(@sidebar-light-bg, 3%);
+      background-color: #fff; 
       border: 1px solid transparent;
       height: 35px;
-      //.transition(all @transition-speed @transition-fn);
+      
     }
     input[type="text"] {
       color: #666;

@@ -1,9 +1,9 @@
 /*
- * Component: Sidebar
+ * Thành phần: Thanh bên
  * ------------------
  */
-//Main Sidebar
-// ``` .left-side has been deprecated as of 2.0.0 in favor of .main-sidebar ```
+//Thanh bên chính
+// ``` .left-side đã không được dùng nữa kể từ phiên bản 2.0.0 mà thay vào đó là .main-sidebar ```
 
 .main-sidebar,
 .left-side {
@@ -14,7 +14,7 @@
   min-height: 100%;
   width: @sidebar-width;
   z-index: 810;
-  //Using disposable variable to join statements with a comma
+//Sử dụng biến dùng một lần để nối các câu lệnh bằng dấu phẩy
   @transition-rule: @transition-speed @transition-fn,
   width @transition-speed @transition-fn;
   .transition-transform(@transition-rule);
@@ -40,14 +40,14 @@
   padding-bottom: 10px;
 }
 
-// remove border from form
+
 .sidebar-form {
   input:focus {
     border-color: transparent;
   }
 }
 
-//Sidebar user panel
+
 .user-panel {
   position: relative;
   width: 100%;
@@ -82,12 +82,12 @@
   }
 }
 
-// Sidebar menu
+
 .sidebar-menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  //First Level
+ 
   > li {
     position: relative;
     margin: 0;
@@ -136,7 +136,7 @@
     }
   }
 
-  // Tree view menu
+  
   .treeview-menu {
     display: none;
     list-style: none;

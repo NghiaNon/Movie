@@ -1,6 +1,6 @@
 /*
- * Component: Small Box
- * --------------------
+ * Thành phần: Hộp Nhỏ
+ * ----------------------
  */
 
 .small-box {
@@ -9,7 +9,7 @@
   display: block;
   margin-bottom: 20px;
   box-shadow: @box-boxshadow;
-  // content wrapper
+  
   > .inner {
     padding: 10px;
   }
@@ -53,7 +53,7 @@
     z-index: 5;
   }
 
-  // the icon
+  
   .icon {
     .transition(all @transition-speed linear);
     position: absolute;
@@ -64,11 +64,11 @@
     color: rgba(0, 0, 0, 0.15);
   }
 
-  // Small box hover state
+  
   &:hover {
     text-decoration: none;
     color: #f9f9f9;
-    // Animate icons on small box hover
+    // Làm sinh động các biểu tượng khi di chuột vào hộp nhỏ
     .icon {
       font-size: 95px;
     }
@@ -76,7 +76,7 @@
 }
 
 @media (max-width: @screen-xs-max) {
-  // No need for icons on very small devices
+  // Không cần biểu tượng trên các thiết bị rất nhỏ
   .small-box {
     text-align: center;
     .icon {

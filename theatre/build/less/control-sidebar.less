@@ -1,15 +1,15 @@
 /*
- * Component: Control sidebar. By default, this is the right sidebar.
+ * Thành phần: Thanh bên điều khiển. Theo mặc định, đây là thanh bên phải.
  */
-//The sidebar's background control class
-//This is a hack to make the background visible while scrolling
+// Lớp điều khiển nền của thanh bên
+// Đây là một mẹo để hiển thị nền khi cuộn
 .control-sidebar-bg {
   position: fixed;
   z-index: 1000;
   bottom: 0;
 }
 
-//Transitions
+//Chuyển tiếp
 .control-sidebar-bg,
 .control-sidebar {
   top: 0;
@@ -18,20 +18,20 @@
   .transition(right @transition-speed ease-in-out);
 }
 
-//The sidebar
+
 .control-sidebar {
   position: absolute;
   padding-top: @navbar-height;
   z-index: 1010;
-  //Fix position after header collapse
+
   @media (max-width: @screen-sm) {
     padding-top: @navbar-height + 50;
   }
-  //Tab panes
+ 
   > .tab-content {
     padding: 10px 15px;
   }
-  //Open state with slide over content effect
+ 
   &.control-sidebar-open {
     &,
     + .control-sidebar-bg {
@@ -40,7 +40,7 @@
   }
 }
 
-//Open without slide over content
+
 .control-sidebar-open {
   .control-sidebar-bg,
   .control-sidebar {
@@ -55,7 +55,7 @@
   }
 }
 
-//Control sidebar tabs
+
 .nav-tabs.control-sidebar-tabs {
   > li {
     &:first-of-type > a {
@@ -68,7 +68,7 @@
     > a {
       .border-radius(0);
 
-      //Hover and active states
+     
       &,
       &:hover {
         border-top: none;
@@ -80,7 +80,7 @@
         font-size: 16px;
       }
     }
-    //Active state
+    
     &.active {
       > a {
         &,
@@ -94,7 +94,7 @@
       }
     }
   }
-  //Remove responsiveness on small screens
+  
   @media (max-width: @screen-sm) {
     display: table;
     > li {
@@ -103,7 +103,7 @@
   }
 }
 
-//Headings in the sidebar content
+
 .control-sidebar-heading {
   font-weight: 400;
   font-size: 16px;
@@ -111,14 +111,14 @@
   margin-bottom: 10px;
 }
 
-//Subheadings
+
 .control-sidebar-subheading {
   display: block;
   font-weight: 400;
   font-size: 14px;
 }
 
-//Control Sidebar Menu
+
 .control-sidebar-menu {
   list-style: none;
   padding: 0;
