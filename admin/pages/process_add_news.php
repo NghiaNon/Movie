@@ -1,7 +1,7 @@
 <?php
     include('../../config.php');
     extract($_POST);
-       $uploaddir = '../news_images/';
+      $uploaddir = '../news_images/';
       $uploadfile = $uploaddir . basename($_FILES['attachment']['name']);
     move_uploaded_file($_FILES['attachment']['tmp_name'],$uploadfile);
     $flname="news_images/".basename($_FILES["attachment"]["name"]);
