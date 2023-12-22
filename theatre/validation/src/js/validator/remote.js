@@ -1,18 +1,18 @@
 (function($) {
     $.fn.bootstrapValidator.validators.remote = {
         /**
-         * Request a remote server to check the input value
+         * Yêu cầu máy chủ từ xa kiểm tra giá trị đầu vào
          *
-         * @param {BootstrapValidator} validator Plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Can consist of the following keys:
-         * - url
-         * - data [optional]: By default, it will take the value
-         *  {
-         *      <fieldName>: <fieldValue>
-         *  }
-         * - message: The invalid message
-         * @returns {string}
+         * Phiên bản plugin trình xác thực @param {BootstrapValidator}
+         * @param {jQuery} validator tử trường $field
+         * Tùy chọn @param {Object} $field thể bao gồm các khóa sau:
+         * - địa chỉ
+         * - data [tùy chọn]: Mặc định sẽ lấy giá trị
+         * {
+         * <fieldName>: <fieldValue>
+         * }
+         * - tin nhắn: Tin nhắn không hợp lệ
+         * @returns {boolean}
          */
         validate: function(validator, $field, options) {
             var value = $field.val(), name = $field.attr('name'), data = options.data;

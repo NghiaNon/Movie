@@ -1,14 +1,14 @@
 (function($) {
     $.fn.bootstrapValidator.validators.lessThan = {
         /**
-         * Return true if the input value is less than or equal to given number
+         * Trả về true nếu giá trị đầu vào nhỏ hơn hoặc bằng số đã cho
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Can consist of the following keys:
-         * - value: The number used to compare to
-         * - inclusive [optional]: Can be true or false. Default is true
-         * - message: The invalid message
+         * @param {BootstrapValidator} validator Phiên bản plugin xác thực
+         * @param {jQuery} $field Phần tử trường
+         * @param {Object} options Có thể bao gồm các phím sau:
+         * - value: Số dùng để so sánh với
+         * - bao gồm [tùy chọn]: Có thể đúng hoặc sai. Mặc định là đúng
+         * - tin nhắn: Tin nhắn không hợp lệ
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {

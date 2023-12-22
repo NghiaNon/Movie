@@ -1,12 +1,12 @@
 (function($) {
     $.fn.bootstrapValidator.validators.hexColor = {
         /**
-         * Return true if the input value is a valid hex color
+         * Trả về true nếu giá trị đầu vào là màu hex hợp lệ
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Can consist of the following keys:
-         * - message: The invalid message
+         * @param {BootstrapValidator} validator phiên bản plugin xác thực của anh ấy
+         * @param {jQuery} $field Phần tử trường
+         * @param {Object} options Có thể bao gồm các phím sau:
+         * - tin nhắn: Tin nhắn không hợp lệ
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {

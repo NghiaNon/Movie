@@ -1,82 +1,82 @@
 (function($) {
     $.fn.bootstrapValidator.validators.uri = {
         /**
-         * Return true if the input value is a valid URL
+         * Trả về true nếu giá trị đầu vào là URL hợp lệ
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options
+         * @param {BootstrapValidator} validator plugin của trình xác thực
+         * @param {jQuery} $field tử trường $field
+         * @param {Object}
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {
-            // Credit to https://gist.github.com/dperini/729294
+           // Tín dụng cho https://Gist.github.com/dperini/729294
             //
-            // Regular Expression for URL validation
+            // Biểu thức chính quy để xác thực URL
             //
-            // Author: Diego Perini
-            // Updated: 2010/12/05
+            // Tác giả: Diego Perini
+            // Cập nhật: 2010/12/05
             //
-            // the regular expression composed & commented
-            // could be easily tweaked for RFC compliance,
-            // it was expressly modified to fit & satisfy
-            // these test for an URL shortener:
+            // biểu thức chính quy được soạn và nhận xét
+            // có thể dễ dàng điều chỉnh để tuân thủ RFC,
+            // nó đã được sửa đổi rõ ràng để phù hợp và đáp ứng
+            // những thử nghiệm này cho trình rút ngắn URL:
             //
-            //   http://mathiasbynens.be/demo/url-regex
+            // http://mathiasbynens.be/demo/url-regex
             //
-            // Notes on possible differences from a standard/generic validation:
+            // Lưu ý về những khác biệt có thể có so với xác thực tiêu chuẩn/chung:
             //
-            // - utf-8 char class take in consideration the full Unicode range
-            // - TLDs have been made mandatory so single names like "localhost" fails
-            // - protocols have been restricted to ftp, http and https only as requested
+            // - lớp char utf-8 xem xét phạm vi Unicode đầy đủ
+            // - TLD đã được đặt thành bắt buộc nên các tên đơn lẻ như "localhost" không thành công
+            // - các giao thức chỉ được giới hạn ở ftp, http và https theo yêu cầu
             //
-            // Changes:
+            // Thay đổi:
             //
-            // - IP address dotted notation validation, range: 1.0.0.0 - 223.255.255.255
-            //   first and last IP address of each class is considered invalid
-            //   (since they are broadcast/network addresses)
+            // - Xác thực ký hiệu chấm địa chỉ IP, phạm vi: 1.0.0.0 - 223.255.255.255
+            // địa chỉ IP đầu tiên và cuối cùng của mỗi lớp được coi là không hợp lệ
+            // (vì chúng là địa chỉ quảng bá/mạng)
             //
-            // - Added exclusion of private, reserved and/or local networks ranges
+            // - Đã thêm loại trừ các phạm vi mạng riêng, dành riêng và/hoặc cục bộ
             //
-            // Compressed one-line versions:
+            // Phiên bản một dòng được nén:
             //
-            // Javascript version
+            // Phiên bản Javascript
             //
-            // /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i
+            // /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\. \d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1, 3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d |3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d| 22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\. (?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0- 9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0- 9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s ]*)?$/tôi
             //
-            // PHP version
+            // Phiên bản PHP
             //
             // _^(?:(?:https?|ftp)://)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\x{00a1}-\x{ffff}0-9]+-?)*[a-z\x{00a1}-\x{ffff}0-9]+)(?:\.(?:[a-z\x{00a1}-\x{ffff}0-9]+-?)*[a-z\x{00a1}-\x{ffff}0-9]+)*(?:\.(?:[a-z\x{00a1}-\x{ffff}]{2,})))(?::\d{2,5})?(?:/[^\s]*)?$_iuS
             var urlExp = new RegExp(
                 "^" +
-                // protocol identifier
+                // định danh giao thức
                 "(?:(?:https?|ftp)://)" +
-                // user:pass authentication
+                // người dùng: vượt qua xác thực
                 "(?:\\S+(?::\\S*)?@)?" +
                 "(?:" +
-                // IP address exclusion
-                // private & local networks
+                // loại trừ địa chỉ IP
+                // mạng riêng & mạng cục bộ
                 "(?!10(?:\\.\\d{1,3}){3})" +
                 "(?!127(?:\\.\\d{1,3}){3})" +
                 "(?!169\\.254(?:\\.\\d{1,3}){2})" +
                 "(?!192\\.168(?:\\.\\d{1,3}){2})" +
                 "(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})" +
-                // IP address dotted notation octets
-                // excludes loopback network 0.0.0.0
-                // excludes reserved space >= 224.0.0.0
-                // excludes network & broacast addresses
-                // (first & last IP address of each class)
+                // Địa chỉ IP ký hiệu chấm chấm
+                // loại trừ mạng loopback 0.0.0.0
+                // loại trừ không gian dành riêng >= 224.0.0.0
+                // loại trừ địa chỉ mạng và quảng bá
+                // (địa chỉ IP đầu tiên và cuối cùng của mỗi lớp)
                 "(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])" +
                 "(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}" +
                 "(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))" +
                 "|" +
-                // host name
+                // tên máy chủ
                 "(?:(?:[a-z\\u00a1-\\uffff0-9]+-?)*[a-z\\u00a1-\\uffff0-9]+)" +
-                // domain name
+                // tên miền
                 "(?:\\.(?:[a-z\\u00a1-\\uffff0-9]+-?)*[a-z\\u00a1-\\uffff0-9]+)*" +
-                // TLD identifier
+                // định danh TLD
                 "(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))" +
                 ")" +
-                // port number
+                // số cổng
                 "(?::\\d{2,5})?" +
                 // resource path
                 "(?:/[^\\s]*)?" +

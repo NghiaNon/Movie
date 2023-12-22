@@ -1,11 +1,11 @@
 (function($) {
     $.fn.bootstrapValidator.validators.digits = {
         /**
-         * Return true if the input value contains digits only
+         * Trả về true nếu giá trị đầu vào chỉ chứa các chữ số
          *
-         * @param {BootstrapValidator} validator Validate plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options
+         * Trình xác thực @param {BootstrapValidator} Xác thực phiên bản plugin
+         * @param {jQuery} Phần tử trường $field
+         * Tùy chọn @param {Object}
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {

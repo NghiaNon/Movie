@@ -1,10 +1,10 @@
 (function($) {
     $.fn.bootstrapValidator.validators.notEmpty = {
         /**
-         * Check if input value is empty or not
+         * Kiểm tra xem giá trị đầu vào có trống hay không
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
+         * @param {BootstrapValidator} validator Phiên bản plugin xác thực
+         * @param {jQuery} $field Phần tử trường
          * @param {Object} options
          * @returns {boolean}
          */

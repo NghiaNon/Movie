@@ -1,10 +1,10 @@
 (function($) {
     $.fn.bootstrapValidator.validators.usZipCode = {
         /**
-         * Return true if and only if the input value is a valid US zip code
+         * Trả về true khi và chỉ nếu giá trị đầu vào là mã zip hợp lệ của Hoa Kỳ
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
+         * @param {BootstrapValidator} validator Phiên bản plugin xác thực
+         * @param {jQuery} $field Phần tử trường
          * @param {Object} options
          * @returns {boolean}
          */

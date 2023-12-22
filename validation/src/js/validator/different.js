@@ -1,12 +1,12 @@
 (function($) {
     $.fn.bootstrapValidator.validators.different = {
         /**
-         * Return true if the input value is different with given field's value
+         * Trả về true nếu giá trị đầu vào khác với giá trị của trường đã cho
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Consists of the following key:
-         * - field: The name of field that will be used to compare with current one
+         * Trình xác thực @param {BootstrapValidator} Phiên bản plugin của trình xác thực
+         * @param {jQuery} Phần tử trường $field
+         * Tùy chọn @param {Object} Bao gồm khóa sau:
+         * - field: Tên trường sẽ được sử dụng để so sánh với trường hiện tại
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {

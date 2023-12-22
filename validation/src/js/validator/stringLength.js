@@ -1,14 +1,14 @@
 (function($) {
     $.fn.bootstrapValidator.validators.stringLength = {
         /**
-         * Check if the length of element value is less or more than given number
+         * Kiểm tra xem độ dài của giá trị phần tử có nhỏ hơn hoặc nhiều hơn số đã cho không
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Consists of following keys:
-         * - min
-         * - max
-         * At least one of two keys is required
+         * Trình xác thực @param {BootstrapValidator} Phiên bản plugin của trình xác thực
+         * @param {jQuery} Phần tử trường $field
+         * Tùy chọn @param {Object} Bao gồm các khóa sau:
+         * - phút
+         * - tối đa
+         * Cần có ít nhất một trong hai phím
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {

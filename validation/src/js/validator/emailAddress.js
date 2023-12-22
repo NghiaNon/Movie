@@ -1,16 +1,16 @@
 (function($) {
     $.fn.bootstrapValidator.validators.emailAddress = {
         /**
-         * Return true if and only if the input value is a valid email address
+         * Trả về true khi và chỉ khi giá trị đầu vào là địa chỉ email hợp lệ
          *
-         * @param {BootstrapValidator} validator Validate plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options
+         * Trình xác thực @param {BootstrapValidator} Xác thực phiên bản plugin
+         * @param {jQuery} Phần tử trường $field
+         * Tùy chọn @param {Object}
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {
             var value = $field.val(),
-                // Email address regular expression
+                // Biểu thức chính quy của địa chỉ email
                 // http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
                 emailRegExp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return emailRegExp.test(value);

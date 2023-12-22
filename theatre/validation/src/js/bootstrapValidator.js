@@ -1,11 +1,11 @@
 /**
  * BootstrapValidator (https://github.com/nghuuphuoc/bootstrapvalidator)
  *
- * A jQuery plugin to validate form fields. Use with Bootstrap 3
+ * Một plugin jQuery để xác thực các trường biểu mẫu. Sử dụng với Bootstrap 3
  *
- * @author      Nguyen Huu Phuoc <phuoc@huuphuoc.me>
- * @copyright   (c) 2013 Nguyen Huu Phuoc
- * @license     MIT
+ * @tác giả Nguyễn Hữu Phước <phuoc@huuphuoc.me>
+ * @copyright (c) 2013 Nguyễn Hữu Phước
+ * @license MIT
  */
 
 (function($) {
@@ -14,7 +14,7 @@
         this.options = $.extend({}, BootstrapValidator.DEFAULT_OPTIONS, options);
 
         if ('disabled' == this.options.live) {
-            // Don't disable the submit buttons if the live validating is disabled
+            // Không tắt các nút gửi nếu xác thực trực tiếp bị tắt
             this.options.submitButtons = null;
         }
 
@@ -26,34 +26,34 @@
         this._init();
     };
 
-    // The default options
+    // Các tùy chọn mặc định
     BootstrapValidator.DEFAULT_OPTIONS = {
-        // The form CSS class
+        // Lớp CSS của biểu mẫu
         elementClass: 'bootstrap-validator-form',
 
-        // Default invalid message
+        // Thông báo mặc định không hợp lệ
         message: 'This value is not valid',
 
-        // The submit buttons selector
-        // These buttons will be disabled when the form input are invalid
+        // Bộ chọn nút gửi
+        // Các nút này sẽ bị tắt khi thông tin nhập vào biểu mẫu không hợp lệ
         submitButtons: 'button[type="submit"]',
 
-        // The custom submit handler
-        // It will prevent the form from the default submitting
+        // Trình xử lý gửi tùy chỉnh
+        // Nó sẽ ngăn việc gửi biểu mẫu mặc định
         //
-        //  submitHandler: function(validator, form) {
-        //      - validator is the BootstrapValidator instance
-        //      - form is the jQuery object present the current form
-        //  }
+        // submitHandler: function(validator, form) {
+        // - trình xác thực là phiên bản BootstrapValidator
+        // - form là đối tượng jQuery trình bày form hiện tại
+        // }
         submitHandler: null,
 
-        // Live validating. Can be one of 3 values:
-        // - enabled: The plugin validates fields as soon as they are changed
-        // - disabled: Disable the live validating. The error messages are only shown after the form is submitted
-        // - submitted: The live validating is enabled after the form is submitted
+        // Xác thực trực tiếp. Có thể là một trong 3 giá trị:
+        // - đã bật: Plugin xác thực các trường ngay khi chúng được thay đổi
+        // - bị vô hiệu hóa: Vô hiệu hóa xác thực trực tiếp. Thông báo lỗi chỉ được hiển thị sau khi biểu mẫu được gửi
+        // - đã gửi: Xác thực trực tiếp được bật sau khi biểu mẫu được gửi
         live: 'enabled',
 
-        // Map the field name with validator rules
+        // Ánh xạ tên trường với các quy tắc xác thực
         fields: null
     };
 
@@ -61,7 +61,7 @@
         constructor: BootstrapValidator,
 
         /**
-         * Init form
+         * Biểu mẫu ban đầu
          */
         _init: function() {
             if (this.options.fields == null) {
@@ -70,7 +70,7 @@
 
             var that = this;
             this.$form
-                // Disable client side validation in HTML 5
+                // Vô hiệu hóa xác thực phía máy khách trong HTML 5
                 .attr('novalidate', 'novalidate')
                 .addClass(this.options.elementClass)
                 .on('submit', function(e) {
@@ -78,7 +78,7 @@
                     if (that.options.fields) {
                         for (var field in that.options.fields) {
                             if (that.numPendingRequests > 0 || that.numPendingRequests == null) {
-                                // Check if the field is valid
+                                // Kiểm tra xem trường có hợp lệ không
                                 var $field = that.getFieldElement(field);
                                 if ($field.data('bootstrapValidator.isValid') !== true) {
                                     that.validateField(field);
@@ -110,12 +110,12 @@
         },
 
         /**
-         * Enable live validating
+         * Kích hoạt xác thực trực tiếp
          */
         _setLiveValidating: function() {
             if ('enabled' == this.options.live) {
                 var that = this;
-                // Since this should be called once, I have to disable the live validating mode
+                // Vì cái này phải được gọi một lần nên tôi phải tắt chế độ xác thực trực tiếp
                 this.options.live = 'disabled';
 
                 for (var field in this.options.fields) {
@@ -135,9 +135,9 @@
         },
 
         /**
-         * Init field
+         * Trường khởi tạo
          *
-         * @param {String} field The field name
+         * Trường @param {String} Tên trường
          */
         _initField: function(field) {
             if (this.options.fields[field] == null || this.options.fields[field].validators == null) {
@@ -149,7 +149,7 @@
                 return;
             }
 
-            // Create a help block element for showing the error
+            // Tạo phần tử khối trợ giúp để hiển thị lỗi
             var that      = this,
                 $parent   = $field.parents('.form-group'),
                 helpBlock = $parent.find('.help-block');
@@ -158,8 +158,8 @@
                 var $small = $('<small/>').addClass('help-block').css('display', 'none').appendTo($parent);
                 $field.data('bootstrapValidator.error', $small);
 
-                // Calculate the number of columns of the label/field element
-                // Then set offset to the help block element
+                // Tính số cột của phần tử nhãn/trường
+                // Sau đó đặt offset cho phần tử khối trợ giúp
                 var label, cssClasses, offset, size;
                 if (label = $parent.find('label').get(0)) {
                     cssClasses = $(label).attr('class').split(' ');
@@ -189,10 +189,10 @@
             }
         },
 
-        /**
-         * Get field element
+       /**
+         * Lấy phần tử trường
          *
-         * @param {String} field The field name
+         * Trường @param {String} Tên trường
          * @returns {jQuery}
          */
         getFieldElement: function(field) {
@@ -201,14 +201,14 @@
         },
 
         /**
-         * Validate given field
+         * Xác thực trường đã cho
          *
-         * @param {String} field The field name
+         * Trường @param {String} Tên trường
          */
         validateField: function(field) {
             var $field = this.getFieldElement(field);
             if (null == $field) {
-                // Return if cannot find the field with given name
+                // Trả về nếu không tìm thấy trường có tên đã cho
                 return;
             }
             var that       = this,
@@ -228,10 +228,10 @@
         },
 
         /**
-         * Show field error
+         * Hiển thị lỗi trường
          *
-         * @param {jQuery} $field The field element
-         * @param {String} validatorName
+         * @param {jQuery} $field Phần tử trường
+         * @param {String}
          */
         showError: function($field, validatorName) {
             var field     = $field.attr('name'),
@@ -241,7 +241,7 @@
 
             this.invalidFields[field] = true;
 
-            // Add has-error class to parent element
+           // Thêm lớp has-error vào phần tử cha
             $parent.removeClass('has-success').addClass('has-error');
 
             $field.data('bootstrapValidator.error').html(message).show();
@@ -249,10 +249,10 @@
             this.$form.find(this.options.submitButtons).attr('disabled', 'disabled');
         },
 
-        /**
-         * Remove error from given field
+       /**
+         * Xóa lỗi khỏi trường nhất định
          *
-         * @param {jQuery} $field The field element
+         * @param {jQuery} $field Phần tử trường
          */
         removeError: function($field) {
             delete this.invalidFields[$field.attr('name')];
@@ -262,10 +262,10 @@
         },
 
         /**
-         * Start remote checking
+         * Bắt đầu kiểm tra từ xa
          *
-         * @param {jQuery} $field The field element
-         * @param {String} validatorName
+         * @param {jQuery} $field Phần tử trường
+         * @param {String}
          * @param {XMLHttpRequest} xhr
          */
         startRequest: function($field, validatorName, xhr) {
@@ -278,7 +278,7 @@
                 this.numPendingRequests = 0;
             }
             this.numPendingRequests++;
-            // Abort the previous request
+           // Hủy bỏ yêu cầu trước đó
             if (!this.xhrRequests[field]) {
                 this.xhrRequests[field] = {};
             }
@@ -291,11 +291,11 @@
         },
 
         /**
-         * Complete remote checking
+         * Hoàn thành kiểm tra từ xa
          *
-         * @param {jQuery} $field The field element
-         * @param {String} validatorName
-         * @param {boolean} isValid
+         * @param {jQuery} $field Phần tử trường
+         * @param {String}
+         * @param {boolean} 
          */
         completeRequest: function($field, validatorName, isValid) {
             if (isValid === false) {
@@ -323,7 +323,7 @@
         },
 
         /**
-         * Check the form validity
+         * Kiểm tra tính hợp lệ của biểu mẫu
          *
          * @returns {boolean}
          */
@@ -340,7 +340,7 @@
         }
     };
 
-    // Plugin definition
+    // Định nghĩa plugin
     $.fn.bootstrapValidator = function(options) {
         return this.each(function() {
             var $this = $(this), data = $this.data('bootstrapValidator');
@@ -350,7 +350,7 @@
         });
     };
 
-    // Available validators
+    // Trình xác nhận có sẵn
     $.fn.bootstrapValidator.validators = {};
 
     $.fn.bootstrapValidator.Constructor = BootstrapValidator;

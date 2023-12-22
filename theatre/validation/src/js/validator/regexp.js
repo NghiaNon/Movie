@@ -1,12 +1,12 @@
 (function($) {
     $.fn.bootstrapValidator.validators.regexp = {
         /**
-         * Check if the element value matches given regular expression
+         * Kiểm tra xem giá trị phần tử có khớp với biểu thức chính quy không
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Consists of the following key:
-         * - regexp: The regular expression you need to check
+         * @param {BootstrapValidator}  validator bản plugin của trình xác thực
+         * @param {jQuery} $field tử trường $field
+         * @param {Object} options gồm khóa sau:
+         * - regrec: Biểu thức chính quy bạn cần kiểm tra
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {

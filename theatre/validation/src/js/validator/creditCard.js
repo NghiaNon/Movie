@@ -1,19 +1,19 @@
 (function($) {
     $.fn.bootstrapValidator.validators.creditCard = {
         /**
-         * Return true if the input value is valid credit card number
-         * Based on https://gist.github.com/DiegoSalazar/4075533
+         * Trả về true nếu giá trị đầu vào là số thẻ tín dụng hợp lệ
+         * Dựa trên https://Gist.github.com/DiegoSalazar/4075533
          *
-         * @param {BootstrapValidator} validator The validator plugin instance
-         * @param {jQuery} $field Field element
-         * @param {Object} options Can consist of the following key:
-         * - message: The invalid message
+         * @param {BootstrapValidator} validator Phiên bản plugin xác thực
+         * @param {jQuery} $field Phần tử trường
+         * @param {Object} options Có thể bao gồm khóa sau:
+         * - tin nhắn: Tin nhắn không hợp lệ
          * @returns {boolean}
          */
         validate: function(validator, $field, options) {
             var value = $field.val();
 
-            // Accept only digits, dashes or spaces
+           // Chỉ chấp nhận chữ số, dấu gạch ngang hoặc dấu cách
             if (/[^0-9-\s]+/.test(value)) {
                 return false;
             }
