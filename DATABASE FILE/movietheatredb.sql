@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 21, 2023 lúc 04:02 PM
+-- Thời gian đã tạo: Th12 22, 2023 lúc 01:00 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -87,9 +87,6 @@ INSERT INTO `tbl_login` (`id`, `user_id`, `username`, `password`, `user_type`) V
 (1, 0, 'admin1', 'password', 0),
 (2, 3, 'admin2', 'password', 1),
 (3, 4, 'admin3', 'password', 1),
-(12, 2, 'harryden@gmail.com', 'password', 2),
-(15, 14, 'USR295127', 'PWD195747', 1),
-(17, 4, 'bruno@gmail.com', 'password', 2),
 (20, 7, 'THR848514', 'PWD873718', 1),
 (22, 6, 'test@gmail.com', '1234567', 2);
 
@@ -167,9 +164,6 @@ CREATE TABLE `tbl_registration` (
 --
 
 INSERT INTO `tbl_registration` (`user_id`, `name`, `email`, `phone`, `age`, `gender`) VALUES
-(2, 'Harry Den', 'harryden@gmail.com', '1247778540', 22, 'gender'),
-(4, 'Bruno', 'bruno@gmail.com', '7451112450', 30, 'gender'),
-(5, 'James', 'james@gmail.com', '7124445696', 25, 'gender'),
 (6, 'test', 'test@gmail.com', '0323456789', 21, 'gender');
 
 -- --------------------------------------------------------
@@ -284,10 +278,10 @@ CREATE TABLE `tbl_theatre` (
 --
 
 INSERT INTO `tbl_theatre` (`id`, `name`, `address`, `place`, `state`, `pin`) VALUES
-(3, 'Rạp CGV', 'CGV Vincom Royal City', 'Nguyễn Trãi', '2D/3D', 691523),
-(4, 'CGV Hà Đông', 'TTTM AEON MALL HÀ ĐÔNG', 'Hà Nội', '2D/3D', 691523),
-(5, 'CGV Mỹ Đình', 'Nam Từ Liêm\r\n', 'Hà Nội', '2D/3D', 691523),
-(6, 'CGV Thanh Xuân', 'Lê Văn Lương', 'Hà Nội', '2D/3D', 224450);
+(3, 'Cinema Production', 'Vincom Royal City', 'Hà Nội', '2D/3D', 691523),
+(4, 'Cinema Production', 'TTTM AEON MALL HÀ ĐÔNG', 'Hà Nội', '2D/3D', 691523),
+(5, 'Cinema Production', 'Nam Từ Liêm\r\n', 'Hà Nội', '2D/3D', 691523),
+(6, 'Cinema Production', 'Lê Văn Lương', 'Hà Nội', '2D/3D', 224450);
 
 --
 -- Chỉ mục cho các bảng đã đổ
