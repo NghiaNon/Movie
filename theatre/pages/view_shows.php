@@ -31,19 +31,19 @@ include('header.php');
           {?>
             <table class="table">
               <th class="col-md-1">
-                Sl.no
+                Số thứ tự
               </th>
               <th class="col-md-2">
-                Screen
+                Phòng
               </th>
               <th class="col-md-3">
-                Show Time
+                Thời gian chiếu
               </th>
               <th class="col-md-3">
-                Movie
+                Phim
               </th>
               <th class="col-md-3">
-                Options
+                Chọn
               </th>
               <?php
               $sl=1;
@@ -74,14 +74,14 @@ include('header.php');
                   <td>
                     <?php if($shows['r_status']==1)
                     {
-                    ?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=0"><button class="btn btn-danger">Stop Running</button></a>
+                    ?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=0"><button class="btn btn-danger">Ngừng chiếu</button></a>
                     <?php
                     }
                     else
-                    {?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=1"><button class="btn btn-success">Start Running</button></a>
+                    {?><a href="change_running.php?id=<?php echo $shows['s_id'];?>&status=1"><button class="btn btn-success">Bắt đầu chiếu</button></a>
                     <?php 
                     }?>
-                    <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"><button class="btn btn-warning">Stop Show</button></a>
+                    <a href="stop_running.php?id=<?php echo $shows['s_id'];?>"><button class="btn btn-warning">Dừng phim</button></a>
                   </td>
                 </tr>
                 <?php

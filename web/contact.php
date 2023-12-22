@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
-	<title>Free Theater Website Template | Contact :: w3layouts</title>
+	<title>Mẫu trang web rạp chiếu phim miễn phí | Contact :: w3layouts</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
@@ -25,10 +25,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="nav-wrap">
 					<ul class="group" id="example-one">
-						<li><a href="index.php">Home</a></li>
-						<li><a href="about.php">About</a></li>
-						<li><a href="movies_events.php">Movies & Events</a></li>
-						<li class="current_page_item"><a href="contact.php">Contact</a></li>
+						<li><a href="index.php">Trang chủ</a></li>
+						<li><a href="about.php">Về</a></li>
+						<li><a href="movies_events.php">Phim & Sự kiện</a></li>
+						<li class="current_page_item"><a href="contact.php">Liên hệ</a></li>
 					</ul>
 				</div>
 				<div class="clear"></div>
@@ -40,15 +40,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<form action="#" id="reservation-form" method="post">
 					<fieldset>
 						<div class="field">
-							<label>Find a Movie:</label>
+							<label>Tìm một bộ phim:</label>
 							<select class="select2">
-								<option>Movie list</option>
+								<option>Danh sách phim</option>
 							</select>
 						</div>
 						<div class="field1">
-							<label>Search</label>
+							<label>Tìm kiếm</label>
 							<select class="select1">
-								<option>Movies or Actors</option>
+								<option>Phim hoặc Diễn viên</option>
 							</select>
 						</div>
 					</fieldset>
@@ -89,7 +89,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col span_1_of_3">
 						<div class="contact_info">
-							<h3>Find Us Here</h3>
+							<h3>Tìm chúng tôi ở đây</h3>
 							<div class="map">
 								<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#666;text-align:left;font-size:12px">View Larger Map</a></small>
 							</div>

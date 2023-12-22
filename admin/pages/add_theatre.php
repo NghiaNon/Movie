@@ -18,8 +18,8 @@ include('header.php');
         Thêm phim mới
       </h1>
       <ol class="breadcrumb">
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active">Add Theatre</li>
+        <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li class="active">Thêm rạp</li>
       </ol>
     </section>
 
