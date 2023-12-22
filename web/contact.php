@@ -1,14 +1,9 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
 
 <head>
-	<title>Mẫu trang web rạp chiếu phim miễn phí | Contact :: w3layouts</title>
+	<title>Mẫu trang web rạp chiếu phim miễn phí</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>

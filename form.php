@@ -1,80 +1,76 @@
 <?php
-
-/**
- * class for build form
- */
 class formBuilder
 {
-    var $form_id; // form id
+    var $form_id; 
     var $validators = " ";
-    function build($type, $name, $id, $class, $placeholder, $opt) //for create input types with given atributes
+    function build($type, $name, $id, $class, $placeholder, $opt) 
     {
-        if ($type == "text") // if text box
+        if ($type == "text") 
         {
             $input = "<input type='text' name='$name' id='$id' class='$class' placeholder='$placeholder' $opt>";
             echo $input;
         }
-        if ($type == "date") // if text box
+        if ($type == "date")
         {
             $input = "<input type='date' name='$name' id='$id' class='$class' placeholder='$placeholder' $opt>";
             echo $input;
         }
-        if ($type == "number") // if number box
+        if ($type == "number")
         {
             $input = "<input type='number' name='$name' id='$id' class='$class' $opt>";
             echo $input;
         }
-        if ($type == "email") // if email
+        if ($type == "email")
         {
             $input = "<input type='email' name='$name' id='$id' class='$class' $opt>";
             echo $input;
         }
-        if ($type == "password") // if password
+        if ($type == "password")
         {
             $input = "<input type='password' name='$name' id='$id' class='$class' placeholder='$placeholder' $opt>";
             echo $input;
         }
-        if ($type == "radio") // if radio button
+        if ($type == "radio")
         {
             $input = "<input type='radio' name='$name' id='$id' class='$class' $opt>";
             echo $input;
         }
-        if ($type == "checkbox") // if checkbox
+        if ($type == "checkbox") 
         {
             $input = "<input type='checkbox' name='$name' id='$id' class='$class' $opt>";
             echo $input;
         }
-        if ($type == "textarea") //if textarea
+        if ($type == "textarea") 
         {
             $input = "<textarea name='$name' id='$id' class='$class' placeholder='$placeholder' $opt></textarea>";
             echo $input;
         }
-        if ($type == "submit") // if submit
+        if ($type == "submit")
         {
             $input = "<button type='submit' class='$class'>$opt</button>";
             echo $input;
         }
-        if ($type == "file") // if text box
+        if ($type == "file") 
         {
             $input = "<input type='file' name='$name' id='$id' class='$class' placeholder='$placeholder' $opt>";
             echo $input;
         }
     }
-    function validate($name, $rules) // function for validation name: name of the field, rules: validation rules
+    function validate($name, $rules) 
     {
 
         $this->validators = $this->validators . "
             $name: {
             verbose: false,
                 validators: {";
-        if (in_array("required", $rules)) // if rules array have value required
+        if (in_array("required", $rules))
         {
             $label = $rules["label"];
             $this->validators = $this->validators . "notEmpty: {
                         message: 'The $label is required and can\'t be empty'
                     },";
         }
-        if (array_key_exists("min", $rules) && array_key_exists("max", $rules)) // if rules array have value min and max
+        if (array_key_exists("min", $rules) && array_key_exists("max", $rules))
         {
             $label = $rules["label"];
             $min = $rules["min"];
@@ -84,7 +80,7 @@ class formBuilder
                     max: $max,
                     message: 'The $label must be more than $min and less than $max characters long'
                 },";
-        } else if (array_key_exists("max", $rules)) // if rules array have value max
+        } else if (array_key_exists("max", $rules)) 
         {
             $label = $rules["label"];
             $max = $rules["max"];
@@ -92,7 +88,7 @@ class formBuilder
                     max: $max,
                     message: 'The $label must be less than $max characters long'
                 },";
-        } else if (array_key_exists("min", $rules)) // if rules array have value min
+        } else if (array_key_exists("min", $rules))
         {
             $label = $rules["label"];
             $min = $rules["min"];
@@ -101,13 +97,13 @@ class formBuilder
                     message: 'The $label must be more than $min characters long'
                 },";
         }
-        if (array_key_exists("regexp", $rules)) // if rules array have value regular expression validation
+        if (array_key_exists("regexp", $rules)) 
         {
             $label = $rules["label"];
             $exp = $rules["regexp"];
-            switch ($exp) // selecting regular expression types
+            switch ($exp) 
             {
-                case "name": // if validation for name
+                case "name": 
                     $expression = '/^[a-zA-Z ]+$/';
                     $err_msg = "The $label can only consist of alphabets";
                     break;
@@ -157,20 +153,20 @@ class formBuilder
                         message: '$err_msg'
                     },";
         }
-        if (in_array("email", $rules)) // if rules array have value required
+        if (in_array("email", $rules))
         {
             $this->validators = $this->validators . "emailAddress: {
                         message: 'The input is not a valid email address'
                     },";
         }
-        if (array_key_exists("identical", $rules)) // if the field identical to another
+        if (array_key_exists("identical", $rules)) 
         {
             $identical = $rules["identical"];
-            $identical_field = explode(" ", $identical); // first array value is the field which identical,second is the label of thal field
+            $identical_field = explode(" ", $identical);
             $idl = $identical_field[0];
             $label = $rules["label"];
             $msg = "";
-            for ($i = 1; $i < sizeof($identical_field); $i++) //for extracting message
+            for ($i = 1; $i < sizeof($identical_field); $i++)
             {
                 $msg = $msg . ' ' . $identical_field[$i];
             }
@@ -179,14 +175,14 @@ class formBuilder
                         message: 'The $msg and $label are not the same'
                     },";
         }
-        if (array_key_exists("different", $rules)) // if the field must different to another
+        if (array_key_exists("different", $rules))
         {
             $different = $rules["different"];
             $label = $rules["label"];
-            $different_field = explode(" ", $different); //first array value is the field which different,second is the label of thal field
+            $different_field = explode(" ", $different); 
             $msg = "";
             $dff = $different_field[0];
-            for ($i = 1; $i < sizeof($different_field); $i++) // for extracting message
+            for ($i = 1; $i < sizeof($different_field); $i++) 
             {
                 $msg = $msg . ' ' . $different_field[$i];
             }
@@ -195,7 +191,7 @@ class formBuilder
                         message: 'The $label and $msg must be different'
                     },";
         }
-        if (array_key_exists("remote", $rules)) // if the field has remote validation
+        if (array_key_exists("remote", $rules))
         {
             $remote = $rules["remote"];
             $label = $rules["label"];
@@ -208,7 +204,7 @@ class formBuilder
         }
         $this->validators = rtrim($this->validators, ",");
         $this->validators = $this->validators . " } },";
-        //echo $this->validators;
+        
     }
     function applyvalidations($form_id)
     {
@@ -224,6 +220,6 @@ class formBuilder
         echo $header;
         echo $this->validators;
         echo $footer;
-        $this->validators = ""; //clearing for nexe form in same page
+        $this->validators = ""; 
     }
 }

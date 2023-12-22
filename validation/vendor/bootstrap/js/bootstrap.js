@@ -1,9 +1,8 @@
 /*!
- * Bootstrap v3.0.2 by @fat and @mdo
- * Copyright 2013 Twitter, Inc.
- * Licensed under http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world by @mdo and @fat.
+ * Bootstrap v3.0.2 bởi @fat and @mdo
+ * Bản quyền 2013 Twitter, Inc.
+ * Được cấp phép theo http://www.apache.org/licenses/LICENSE-2.0
+ * Được thiết kế và xây dựng bằng tất cả tình yêu trên thế giới bởi @mdo và @fat.
  */
 
 if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }
@@ -12,25 +11,25 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
  * Bootstrap: transition.js v3.0.2
  * http://getbootstrap.com/javascript/#transitions
  * ========================================================================
- * Copyright 2013 Twitter, Inc.
+* Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+* Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
  * ======================================================================== */
 
 
 +function ($) { "use strict";
 
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // HỖ TRỢ CHUYỂN TIẾP CSS (Shoutout: http://www.modernizr.com/)
   // ============================================================
 
   function transitionEnd() {
@@ -65,30 +64,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: alert.js v3.0.2
+/* ==================================================== ===========================
+ * Bootstrap: cảnh báo.js v3.0.2
  * http://getbootstrap.com/javascript/#alerts
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // ALERT CLASS DEFINITION
-  // ======================
+  // ĐỊNH NGHĨA LỚP CẢNH BÁO
+  // ========================
 
   var dismiss = '[data-dismiss="alert"]'
   var Alert   = function (el) {
@@ -130,8 +129,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // ALERT PLUGIN DEFINITION
-  // =======================
+  // ĐỊNH NGHĨA PLUGIN CẢNH BÁO
+  // =========================
 
   var old = $.fn.alert
 
@@ -148,8 +147,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.alert.Constructor = Alert
 
 
-  // ALERT NO CONFLICT
-  // =================
+  // CẢNH BÁO KHÔNG CÓ XUNG ĐỘT
+  // ===================
 
   $.fn.alert.noConflict = function () {
     $.fn.alert = old
@@ -157,37 +156,37 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // ALERT DATA-API
-  // ==============
+  // ALERT DỮ LIỆU-API
+  // ================
 
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: button.js v3.0.2
+/* ==================================================== ===========================
+ * Bootstrap: nút.js v3.0.2
  * http://getbootstrap.com/javascript/#buttons
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // BUTTON PUBLIC CLASS DEFINITION
-  // ==============================
+  // ĐỊNH NGHĨA LỚP CÔNG CỘNG NÚT
+  // =================================
 
   var Button = function (element, options) {
     this.$element = $(element)
@@ -210,7 +209,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     $el[val](data[state] || this.options[state])
 
-    // push to event loop to allow forms to submit
+    // đẩy tới vòng lặp sự kiện để cho phép gửi biểu mẫu
     setTimeout(function () {
       state == 'loadingText' ?
         $el.addClass(d).attr(d, d) :
@@ -232,8 +231,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // BUTTON PLUGIN DEFINITION
-  // ========================
+  // ĐỊNH NGHĨA NÚT PLUGIN
+  // ==========================
 
   var old = $.fn.button
 
@@ -253,17 +252,16 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.button.Constructor = Button
 
 
-  // BUTTON NO CONFLICT
-  // ==================
+  // NÚT KHÔNG XUNG ĐỘT
+  // ====================
 
   $.fn.button.noConflict = function () {
     $.fn.button = old
     return this
   }
 
-
-  // BUTTON DATA-API
-  // ===============
+// NÚT DỮ LIỆU-API
+  // =================
 
   $(document).on('click.bs.button.data-api', '[data-toggle^=button]', function (e) {
     var $btn = $(e.target)
@@ -274,30 +272,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: carousel.js v3.0.2
  * http://getbootstrap.com/javascript/#carousel
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // CAROUSEL CLASS DEFINITION
-  // =========================
+ // ĐỊNH NGHĨA LỚP CAROUSEL
+  // ===========================
 
   var Carousel = function (element, options) {
     this.$element    = $(element)
@@ -432,9 +430,9 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     return this
   }
 
-
-  // CAROUSEL PLUGIN DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA PLUGIN CAROUSEL
+  // ============================
+ 
 
   var old = $.fn.carousel
 
@@ -455,8 +453,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.carousel.Constructor = Carousel
 
 
-  // CAROUSEL NO CONFLICT
-  // ====================
+  // CAROUSEL KHÔNG CÓ XUNG ĐỘT
+  // ======================
 
   $.fn.carousel.noConflict = function () {
     $.fn.carousel = old
@@ -464,8 +462,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // CAROUSEL DATA-API
-  // =================
+  // API DỮ LIỆU CAROUSEL
+  // ===================
 
   $(document).on('click.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
     var $this   = $(this), href
@@ -492,30 +490,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: collapse.js v3.0.2
+/* ==================================================== ===========================
+ * Bootstrap: thu gọn.js v3.0.2
  * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // COLLAPSE PUBLIC CLASS DEFINITION
-  // ================================
+  // THU GẬP ĐỊNH NGHĨA LỚP CÔNG CỘNG
+  // ===================================
 
   var Collapse = function (element, options) {
     this.$element      = $(element)
@@ -620,8 +618,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // COLLAPSE PLUGIN DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA PLUGIN THU GỠ
+  // ============================
 
   var old = $.fn.collapse
 
@@ -639,8 +637,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.collapse.Constructor = Collapse
 
 
-  // COLLAPSE NO CONFLICT
-  // ====================
+  // THU GẬP KHÔNG XUNG ĐỘT
+  // ======================
 
   $.fn.collapse.noConflict = function () {
     $.fn.collapse = old
@@ -648,8 +646,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // COLLAPSE DATA-API
-  // =================
+  // THU GỌN DỮ LIỆU-API
+  // ===================
 
   $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
     var $this   = $(this), href
@@ -672,30 +670,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: dropdown.js v3.0.2
  * http://getbootstrap.com/javascript/#dropdowns
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // DROPDOWN CLASS DEFINITION
-  // =========================
+  // ĐỊNH NGHĨA LỚP DROPDOWN
+  // ===========================
 
   var backdrop = '.dropdown-backdrop'
   var toggle   = '[data-toggle=dropdown]'
@@ -715,7 +713,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     if (!isActive) {
       if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
-        // if mobile we we use a backdrop because click events don't delegate
+        // nếu là thiết bị di động, chúng tôi sử dụng phông nền vì các sự kiện nhấp chuột không được ủy quyền
         $('<div class="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
       }
 
@@ -757,8 +755,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     var index = $items.index($items.filter(':focus'))
 
-    if (e.keyCode == 38 && index > 0)                 index--                        // up
-    if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
+    if (e.keyCode == 38 && index > 0)                 index--                        // lên
+    if (e.keyCode == 40 && index < $items.length - 1) index++                        // xuống
     if (!~index)                                      index=0
 
     $items.eq(index).focus()
@@ -780,7 +778,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && /#/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+      selector = selector && /#/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // dải cho ie7
     }
 
     var $parent = selector && $(selector)
@@ -789,8 +787,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // DROPDOWN PLUGIN DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA PLUGIN DROPDOWN
+  // ============================
 
   var old = $.fn.dropdown
 
@@ -807,8 +805,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.dropdown.Constructor = Dropdown
 
 
-  // DROPDOWN NO CONFLICT
-  // ====================
+  // THẢ XUỐNG KHÔNG CÓ XUNG ĐỘT
+  // ======================
 
   $.fn.dropdown.noConflict = function () {
     $.fn.dropdown = old
@@ -816,8 +814,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // APPLY TO STANDARD DROPDOWN ELEMENTS
-  // ===================================
+  // ÁP DỤNG CHO CÁC YẾU TỐ THẢ XUỐNG TIÊU CHUẨN
+  // ======================================
 
   $(document)
     .on('click.bs.dropdown.data-api', clearMenus)
@@ -827,30 +825,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: modal.js v3.0.2
  * http://getbootstrap.com/javascript/#modals
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // MODAL CLASS DEFINITION
-  // ======================
+  // ĐỊNH NGHĨA LỚP PHƯƠNG THỨC
+  // ========================
 
   var Modal = function (element, options) {
     this.options   = options
@@ -889,13 +887,13 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
       var transition = $.support.transition && that.$element.hasClass('fade')
 
       if (!that.$element.parent().length) {
-        that.$element.appendTo(document.body) // don't move modals dom position
+        that.$element.appendTo(document.body) // không di chuyển vị trí dom của phương thức
       }
 
       that.$element.show()
 
       if (transition) {
-        that.$element[0].offsetWidth // force reflow
+        that.$element[0].offsetWidth // buộc chỉnh lại dòng
       }
 
       that.$element
@@ -907,7 +905,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
       var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
 
       transition ?
-        that.$element.find('.modal-dialog') // wait for modal to slide in
+        that.$element.find('.modal-dialog') // đợi modal trượt vào
           .one($.support.transition.end, function () {
             that.$element.focus().trigger(e)
           })
@@ -945,7 +943,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
   Modal.prototype.enforceFocus = function () {
     $(document)
-      .off('focusin.bs.modal') // guard against infinite focus loop
+      .off('focusin.bs.modal') // bảo vệ chống lại vòng lặp tiêu điểm vô hạn
       .on('focusin.bs.modal', $.proxy(function (e) {
         if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
           this.$element.focus()
@@ -994,7 +992,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
           : this.hide.call(this)
       }, this))
 
-      if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
+      if (doAnimate) this.$backdrop[0].offsetWidth // buộc chỉnh lại dòng
 
       this.$backdrop.addClass('in')
 
@@ -1021,8 +1019,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // MODAL PLUGIN DEFINITION
-  // =======================
+  // ĐỊNH NGHĨA PLUGIN PHƯƠNG THỨC
+  // =========================
 
   var old = $.fn.modal
 
@@ -1041,8 +1039,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.modal.Constructor = Modal
 
 
-  // MODAL NO CONFLICT
-  // =================
+  // PHƯƠNG THỨC KHÔNG XUNG ĐỘT
+  // ===================
 
   $.fn.modal.noConflict = function () {
     $.fn.modal = old
@@ -1050,8 +1048,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // MODAL DATA-API
-  // ==============
+  // API DỮ LIỆU PHƯƠNG THỨC
+  // ================
 
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
@@ -1074,31 +1072,31 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: tooltip.js v3.0.2
  * http://getbootstrap.com/javascript/#tooltip
- * Inspired by the original jQuery.tipsy by Jason Frame
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * Lấy cảm hứng từ jQuery.tipsy gốc của Jason Frame
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // TOOLTIP PUBLIC CLASS DEFINITION
-  // ===============================
+  // ĐỊNH NGHĨA LỚP CÔNG CỤ TOOLTIP
+  // ==================================
 
   var Tooltip = function (element, options) {
     this.type       =
@@ -1274,11 +1272,11 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     var width  = $tip[0].offsetWidth
     var height = $tip[0].offsetHeight
 
-    // manually read margins because getBoundingClientRect includes difference
+    // đọc lề theo cách thủ công vì getBoundingClientRect bao gồm sự khác biệt
     var marginTop = parseInt($tip.css('margin-top'), 10)
     var marginLeft = parseInt($tip.css('margin-left'), 10)
 
-    // we must check for NaN for ie 8/9
+    // chúng ta phải kiểm tra NaN tức là 8/9
     if (isNaN(marginTop))  marginTop  = 0
     if (isNaN(marginLeft)) marginLeft = 0
 
@@ -1289,7 +1287,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
       .offset(offset)
       .addClass('in')
 
-    // check to see if placing tip in new offset caused the tip to resize itself
+    // kiểm tra xem việc đặt tip vào offset mới có làm cho tip tự thay đổi kích thước không
     var actualWidth  = $tip[0].offsetWidth
     var actualHeight = $tip[0].offsetHeight
 
@@ -1432,8 +1430,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // TOOLTIP PLUGIN DEFINITION
-  // =========================
+  // ĐỊNH NGHĨA PLUGIN TOOLTIP
+  // ===========================
 
   var old = $.fn.tooltip
 
@@ -1451,8 +1449,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.tooltip.Constructor = Tooltip
 
 
-  // TOOLTIP NO CONFLICT
-  // ===================
+  // TOOLTIP KHÔNG CÓ XUNG ĐỘT
+  // =====================
 
   $.fn.tooltip.noConflict = function () {
     $.fn.tooltip = old
@@ -1461,30 +1459,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: popover.js v3.0.2
  * http://getbootstrap.com/javascript/#popovers
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // POPOVER PUBLIC CLASS DEFINITION
-  // ===============================
+  // ĐỊNH NGHĨA LỚP CÔNG CỘNG POPOVER
+  // ==================================
 
   var Popover = function (element, options) {
     this.init('popover', element, options)
@@ -1500,8 +1498,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   })
 
 
-  // NOTE: POPOVER EXTENDS tooltip.js
-  // ================================
+ // LƯU Ý: POPOVER EXTENDS tooltip.js
+  // ===================================
 
   Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype)
 
@@ -1521,8 +1519,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     $tip.removeClass('fade top bottom left right in')
 
-    // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
-    // this manually by checking the contents.
+    // IE8 không chấp nhận việc ẩn thông qua bộ chọn giả `:empty`, chúng ta phải làm như vậy
+    // việc này một cách thủ công bằng cách kiểm tra nội dung.
     if (!$tip.find('.popover-title').html()) $tip.find('.popover-title').hide()
   }
 
@@ -1550,8 +1548,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // POPOVER PLUGIN DEFINITION
-  // =========================
+  // ĐỊNH NGHĨA PLUGIN POPOVER
+  // ===========================
 
   var old = $.fn.popover
 
@@ -1569,8 +1567,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.popover.Constructor = Popover
 
 
-  // POPOVER NO CONFLICT
-  // ===================
+  // POPOVER KHÔNG XUNG ĐỘT
+  // =====================
 
   $.fn.popover.noConflict = function () {
     $.fn.popover = old
@@ -1579,30 +1577,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: scrollspy.js v3.0.2
+/* ==================================================== ===========================
+ * Bootstrap: Scrollspy.js v3.0.2
  * http://getbootstrap.com/javascript/#scrollspy
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // SCROLLSPY CLASS DEFINITION
-  // ==========================
+  // ĐỊNH NGHĨA LỚP SCROLLSPY
+  // ============================
 
   function ScrollSpy(element, options) {
     var href
@@ -1698,8 +1696,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // SCROLLSPY PLUGIN DEFINITION
-  // ===========================
+  // ĐỊNH NGHĨA PLUGIN CUỘN
+  // ==============================
 
   var old = $.fn.scrollspy
 
@@ -1717,8 +1715,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.scrollspy.Constructor = ScrollSpy
 
 
-  // SCROLLSPY NO CONFLICT
-  // =====================
+  // SCROLLSPY KHÔNG CÓ XUNG ĐỘT
+  // =======================
 
   $.fn.scrollspy.noConflict = function () {
     $.fn.scrollspy = old
@@ -1726,8 +1724,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // SCROLLSPY DATA-API
-  // ==================
+  // API DỮ LIỆU CUỘN
+  // ====================
 
   $(window).on('load', function () {
     $('[data-spy="scroll"]').each(function () {
@@ -1738,30 +1736,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: tab.js v3.0.2
  * http://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // TAB CLASS DEFINITION
-  // ====================
+  // ĐỊNH NGHĨA LỚP TAB
+  // ======================
 
   var Tab = function (element) {
     this.element = $(element)
@@ -1774,7 +1772,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // dải cho ie7
     }
 
     if ($this.parent('li').hasClass('active')) return
@@ -1814,7 +1812,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
       element.addClass('active')
 
       if (transition) {
-        element[0].offsetWidth // reflow for transition
+        element[0].offsetWidth // chỉnh lại dòng cho quá trình chuyển đổi
         element.addClass('in')
       } else {
         element.removeClass('fade')
@@ -1837,8 +1835,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // TAB PLUGIN DEFINITION
-  // =====================
+  // ĐỊNH NGHĨA PLUGIN TAB
+  // =======================
 
   var old = $.fn.tab
 
@@ -1855,8 +1853,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.tab.Constructor = Tab
 
 
-  // TAB NO CONFLICT
-  // ===============
+  // TAB KHÔNG XUNG ĐỘT
+  // =================
 
   $.fn.tab.noConflict = function () {
     $.fn.tab = old
@@ -1864,8 +1862,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // TAB DATA-API
-  // ============
+  // TAB DỮ LIỆU-API
+  // =============
 
   $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
     e.preventDefault()
@@ -1874,30 +1872,30 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
 }(jQuery);
 
-/* ========================================================================
+/* ==================================================== ===========================
  * Bootstrap: affix.js v3.0.2
  * http://getbootstrap.com/javascript/#affix
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
+ * ====================================================== ==========================
+ * Bản quyền 2013 Twitter, Inc.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Được cấp phép theo Giấy phép Apache, Phiên bản 2.0 ("Giấy phép");
+ * bạn không được sử dụng tệp này trừ khi tuân thủ Giấy phép.
+ * Bạn có thể lấy bản sao Giấy phép tại
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+ * Trừ khi luật pháp hiện hành yêu cầu hoặc được đồng ý bằng văn bản, phần mềm
+ * được phân phối theo Giấy phép được phân phối trên CƠ SỞ "NGUYÊN TRẠNG",
+ * KHÔNG CÓ BẢO ĐẢM HOẶC ĐIỀU KIỆN DƯỚI BẤT KỲ LOẠI NÀO, dù rõ ràng hay ngụ ý.
+ * Xem Giấy phép để biết các quyền quản lý ngôn ngữ cụ thể và
+ * những hạn chế theo Giấy phép.
+ * ====================================================== ========================= */
 
 
 +function ($) { "use strict";
 
-  // AFFIX CLASS DEFINITION
-  // ======================
+  // ĐỊNH NGHĨA LỚP AFFIX
+  // ========================
 
   var Affix = function (element, options) {
     this.options = $.extend({}, Affix.DEFAULTS, options)
@@ -1954,8 +1952,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // AFFIX PLUGIN DEFINITION
-  // =======================
+  // ĐỊNH NGHĨA PLUGIN
+  // =========================
 
   var old = $.fn.affix
 
@@ -1973,8 +1971,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   $.fn.affix.Constructor = Affix
 
 
-  // AFFIX NO CONFLICT
-  // =================
+  // KÍNH KHÔNG XUNG ĐỘT
+  // ===================
 
   $.fn.affix.noConflict = function () {
     $.fn.affix = old
@@ -1982,8 +1980,8 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   }
 
 
-  // AFFIX DATA-API
-  // ==============
+  // CỐ ĐỊNH DỮ LIỆU-API
+  // ================
 
   $(window).on('load', function () {
     $('[data-spy="affix"]').each(function () {

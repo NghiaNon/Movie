@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
 include('config.php');
 extract($_POST);
 
-//OTP Code
+//Mã OTP
 if ($otp == "123456") {
     $bookid = "BIDV" . rand(1000000, 9999999);
     mysqli_query($con, "INSERT into tbl_bookings values(NULL,'$bookid','" . $_SESSION['theatre'] . "','" . $_SESSION['user'] . "','" . $_SESSION['show'] . "','" . $_SESSION['screen'] . "','" . $_SESSION['seats'] . "','" . $_SESSION['amount'] . "','" . $_SESSION['date'] . "',CURDATE(),'1')");

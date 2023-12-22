@@ -89,7 +89,7 @@
 			while ($ss = mysqli_fetch_array($qry2)) {
 
 				$string .= "'" . strtoupper($ss['movie_name']) . "'" . ",";
-				//$string=implode(',',$string);
+				
 
 
 			}
