@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML>
 <html>
-	
+
 <head>
 	<title>Liên hệ</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -75,7 +75,7 @@
 
 								<div>
 									<span><label>Mô tả</label></span>
-									<span><textarea required name="subect"> </textarea></span>
+									<span><textarea required name="subject"> </textarea></span>
 								</div>
 								<div>
 									<span><input type="submit" value="Gửi" style="background-color:green;"></span>
